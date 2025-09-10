@@ -1,0 +1,44 @@
+@use 'tiny-grid';
+
+/** core variables **/
+$nav-height: 44px;
+
+:root {
+	--primary-col: #e6f6e5;      	// Primary colour
+	--primary-reg-col: #00857e; 	// Primary FreeREG colour
+	--primary-back: teal;    		// Primary background
+	--primary-accent-col: #517481;
+	--primary-accent-font-col: #364d55;
+
+	--reg-back: #007fad;
+	--reg-col: #b8ecff;
+
+	--error-col: #d80000;
+	--success-col: #009000;
+
+	--gutter: 10px;
+
+	font-family: 'Open Sans', sans-serif;
+	--nav-height: $nav-height;
+}
+
+// high level pan-project styling
+body {
+	margin: 0;
+	background-color: var(--primary-col);
+}
+
+nav {
+	height: var(--nav-height);
+	background-color: var(--primary-back);
+	display:flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 5px;
+}
+
+/* utility classes */
+.gutter 	{ margin:0 var(--gutter); }
+.error 	{ color: var(--error-col); }
+.success { color: var(--success-col); }
+.none 	{ display:none; }
