@@ -1,0 +1,12 @@
+section.logo {
+	display:flex;
+	background:white;
+	height:50px;
+	justify-content: space-between;
+	img {
+		scale: 0.8;
+		&.smaller {
+			scale: 0.7;
+		}
+	}
+}
