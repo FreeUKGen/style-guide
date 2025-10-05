@@ -31,8 +31,22 @@ body {
 	background-color: var(--primary-back);
 }
 
+a {
+	color: var(--primary-reg-col);
+}
+
+tr {
+	background:grey;
+	color:black;
+	font-weight:normal;
+	th {
+		text-align:left;
+	}
+}
+
 /* utility classes */
 .gutter 	{ margin:0 var(--gutter); }
 .error 	{ color: var(--error-col); }
 .success { color: var(--success-col); }
 .none 	{ display:none; }
+.block 	{ display:block; }
