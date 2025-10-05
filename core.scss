@@ -35,12 +35,24 @@ a {
 	color: var(--primary-reg-col);
 }
 
-tr {
-	background:grey;
-	color:black;
-	font-weight:normal;
-	th {
-		text-align:left;
+table {
+	background: lightgrey;
+	border:none;
+	border-collapse: collapse;
+	thead {
+		background:lightgrey;
+		color:black;
+		font-weight:normal;
+		th {
+			padding: 0.3em;
+			text-align:left;
+		}
+	}
+	tbody {
+		background: white;
+		td {
+			text-align:center;
+		}
 	}
 }
 
