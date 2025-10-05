@@ -1,0 +1,71 @@
+.container,
+.container-fluid,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container, .container-sm {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container, .container-sm, .container-md {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container, .container-sm, .container-md, .container-lg {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container, .container-sm, .container-md, .container-lg, .container-xl {
+    max-width: 1140px;
+  }
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex: 1 0 100%;
+  flex: 1 0 100%;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pt-1 { margin-top:0.5em; }
+.pt-2 { margin-top:1m; }
+.pt-3 { margin-top:1.5em; }
+.pt-4 { margin-top:2em; }
+.pt-5 { margin-top:2.5em; }
+.pt-6 { margin-top:3em; }
+
+.px-1 { margin-left:0.5em; margin-right:0.5em }
+.px-2 { margin-left:1em; margin-right:1em }
+.px-3 { margin-left:1.5em; margin-right:1.5em }
+.px-4 { margin-left:2em; margin-right:2em }
+
+.py-1 { margin-top:0.5em; margin-bottom:0.5em }
+.py-2 { margin-top:1em; margin-bottom:1em }
+.py-3 { margin-top:1.5em; margin-bottom:1.5em }
+.py-4 { margin-top:2em; margin-bottom:2em }
+
+button, a.btn {
+	background: var(--primary-reg-col);
+	color:white;
+	padding:0.6em 1.2em;
+	text-align:center;
+	border-radius: 5px;
+}
