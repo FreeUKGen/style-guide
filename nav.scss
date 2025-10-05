@@ -12,7 +12,11 @@ $breakpoint:600px;
 nav {
 	display:flex;
 	justify-content: space-between;
+	align-items: center;
 	color:white;
+	height: var(--nav-height);
+	background: var(--primary-reg-color);
+
 	a.logo {
 		background:white;
 		img {

@@ -9,7 +9,7 @@ $nav-height: 44px;
 	--nav-col: #fff; 		     	// Primary Nav colour
 	--primary-col: #e6f6e5;      	// Primary colour
 	--primary-reg-col: #015c57; 	// Primary FreeREG colour
-	--primary-back: #017373;    		// Primary background
+	--primary-back: white;    		// Primary background
 	--primary-accent-col: #517481;
 	--primary-accent-font-col: #364d55;
 
@@ -28,7 +28,7 @@ $nav-height: 44px;
 // high level pan-project styling
 body {
 	margin: 0;
-	background-color: var(--primary-col);
+	background-color: var(--primary-back);
 }
 
 /* utility classes */
