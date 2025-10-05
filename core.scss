@@ -1,12 +1,14 @@
 @use 'tiny-grid';
+@use 'nav';
 
 /** core variables **/
 $nav-height: 44px;
 
 :root {
+	--nav-col: #fff; 		     	// Primary Nav colour
 	--primary-col: #e6f6e5;      	// Primary colour
-	--primary-reg-col: #00857e; 	// Primary FreeREG colour
-	--primary-back: teal;    		// Primary background
+	--primary-reg-col: #015c57; 	// Primary FreeREG colour
+	--primary-back: #017373;    		// Primary background
 	--primary-accent-col: #517481;
 	--primary-accent-font-col: #364d55;
 
@@ -19,22 +21,13 @@ $nav-height: 44px;
 	--gutter: 10px;
 
 	font-family: 'Open Sans', sans-serif;
-	--nav-height: $nav-height;
+	--nav-height: 44px;
 }
 
 // high level pan-project styling
 body {
 	margin: 0;
 	background-color: var(--primary-col);
-}
-
-nav {
-	height: var(--nav-height);
-	background-color: var(--primary-back);
-	display:flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 0 5px;
 }
 
 /* utility classes */
