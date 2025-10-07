@@ -4,29 +4,46 @@
 - refactor when we have more input types to share global default and state styles
 - amend checkbox checked color of checkmark styles - see reusable component library
 */
-input:where([type='checkbox']) {
-  width: 24px; 
-  height: 24px;
+input:where([type="checkbox"]) {
+  width: 25px;
+  height: 25px;
   margin: 0;
   border-radius: 4px;
-  display: inline-block;
   cursor: pointer;
   border: 2px solid var(--primary-reg-col);
 }
 
-input:where([type='checkbox']):focus-visible {
-  outline-style: solid; 
+input:where([type="checkbox"]):focus-visible {
+  outline-style: solid;
   outline-width: 1px;
-  outline-color: var(--primary-reg-col); 
-  outline-offset: 2px; 
+  outline-color: var(--primary-reg-col);
+  outline-offset: 2px;
 }
 
-input:where([type='search']) {
+input:where([type="checkbox"]):checked {
+  background: var(--primary-reg-col);
+}
+
+input:where([type="checkbox"]):checked::before {
+  content: "";
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTMiIHZpZXdCb3g9IjAgMCAxOCAxMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTYuNTQ5OTggMTNMMC44NDk5NzYgNy4yOTk5OEwyLjI3NDk4IDUuODc0OThMNi41NDk5OCAxMC4xNUwxNS43MjUgMC45NzQ5NzZMMTcuMTUgMi4zOTk5OEw2LjU0OTk4IDEzWiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+");
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 12px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+
+input:where([type="search"]) {
   display: block;
-  font-size: 0.875rem; 
+  font-size: 0.875rem;
   line-height: 1;
-  padding: 10px 10px 10px 24px; 
-  min-height: 44px; 
+  padding: 10px 10px 10px 24px;
+  min-height: 44px;
   min-width: 16rem;
   max-width: 320px;
   width: 100%;
@@ -38,13 +55,13 @@ input:where([type='search']) {
   border: 1px solid black;
 }
 
-input:where([type='search']):focus-visible {
-  outline-style: solid; 
+input:where([type="search"]):focus-visible {
+  outline-style: solid;
   outline-width: 1px;
-  outline-color: var(--primary-reg-col); 
-  outline-offset: 2px; 
+  outline-color: var(--primary-reg-col);
+  outline-offset: 2px;
 }
 
-input:where([type='search']):not(:placeholder-shown) {
+input:where([type="search"]):not(:placeholder-shown) {
   background-image: none;
 }

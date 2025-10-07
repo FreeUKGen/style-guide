@@ -58,10 +58,20 @@
 		border: 0;
 		padding: 0;
 	}
-
+	/*
+	strip out browser's native input styling / user agent stylesheet
+	use pseudo-element to create our own custom styled inputs (input.scss or form.scss)
+	*/
 	input, select, textarea {
 		-moz-appearance: none;
 		-webkit-appearance: none;
 		-ms-appearance: none;
 		appearance: none;
+		width: 1rem;
+		height: 1rem;
+		border: none;
+		display: inline-block;
+		position: relative;
+		margin: 0;
+		vertical-align: middle;
 	}
