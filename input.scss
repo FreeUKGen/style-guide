@@ -1,22 +1,50 @@
+/*
+@to-do
+- use rem when we know what the root font size is
+- refactor when we have more input types to share global default and state styles
+- amend checkbox checked color of checkmark styles - see reusable component library
+*/
 input:where([type='checkbox']) {
-  width: 24px; // use rem when we know what the root font size is
+  width: 24px; 
   height: 24px;
   margin: 0;
   border-radius: 4px;
   display: inline-block;
   cursor: pointer;
   border: 2px solid var(--primary-reg-col);
-  :focus {
-    outline: 1px solid var(--primary-reg-col);
-    outline-offset: 1px;
-  }
+}
+
+input:where([type='checkbox']):focus-visible {
+  outline-style: solid; 
+  outline-width: 1px;
+  outline-color: var(--primary-reg-col); 
+  outline-offset: 2px; 
 }
 
 input:where([type='search']) {
+  display: block;
   font-size: 0.875rem; 
-  padding-top: 0; 
-  padding-bottom: 0; 
-  height: 35px; 
-  min-width: 16rem; 
-  max-width: 100%; 
+  line-height: 1;
+  padding: 10px 10px 10px 24px; 
+  min-height: 44px; 
+  min-width: 16rem;
+  max-width: 320px;
+  width: 100%;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2LjYgMThMMTAuMyAxMS43QzkuOCAxMi4xIDkuMjI1IDEyLjQxNjcgOC41NzUgMTIuNjVDNy45MjUgMTIuODgzMyA3LjIzMzMzIDEzIDYuNSAxM0M0LjY4MzMzIDEzIDMuMTQ2IDEyLjM3MDcgMS44ODggMTEuMTEyQzAuNjMgOS44NTMzMyAwLjAwMDY2NzE5NiA4LjMxNiA1LjI5MTAxZS0wNyA2LjVDLTAuMDAwNjY2MTM4IDQuNjg0IDAuNjI4NjY3IDMuMTQ2NjcgMS44ODggMS44ODhDMy4xNDczMyAwLjYyOTMzMyA0LjY4NDY3IDAgNi41IDBDOC4zMTUzMyAwIDkuODUzIDAuNjI5MzMzIDExLjExMyAxLjg4OEMxMi4zNzMgMy4xNDY2NyAxMy4wMDIgNC42ODQgMTMgNi41QzEzIDcuMjMzMzMgMTIuODgzMyA3LjkyNSAxMi42NSA4LjU3NUMxMi40MTY3IDkuMjI1IDEyLjEgOS44IDExLjcgMTAuM0wxOCAxNi42TDE2LjYgMThaTTYuNSAxMUM3Ljc1IDExIDguODEyNjcgMTAuNTYyNyA5LjY4OCA5LjY4OEMxMC41NjMzIDguODEzMzMgMTEuMDAwNyA3Ljc1MDY3IDExIDYuNUMxMC45OTkzIDUuMjQ5MzMgMTAuNTYyIDQuMTg3IDkuNjg4IDMuMzEzQzguODE0IDIuNDM5IDcuNzUxMzMgMi4wMDEzMyA2LjUgMkM1LjI0ODY3IDEuOTk4NjcgNC4xODYzMyAyLjQzNjMzIDMuMzEzIDMuMzEzQzIuNDM5NjcgNC4xODk2NyAyLjAwMiA1LjI1MiAyIDYuNUMxLjk5OCA3Ljc0OCAyLjQzNTY3IDguODEwNjcgMy4zMTMgOS42ODhDNC4xOTAzMyAxMC41NjUzIDUuMjUyNjcgMTEuMDAyNyA2LjUgMTFaIiBmaWxsPSIjNzA3MDcwIi8+Cjwvc3ZnPg==");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 0.9rem;
+  border-radius: 4px;
+  border: 1px solid black;
+}
+
+input:where([type='search']):focus-visible {
+  outline-style: solid; 
+  outline-width: 1px;
+  outline-color: var(--primary-reg-col); 
+  outline-offset: 2px; 
+}
+
+input:where([type='search']):not(:placeholder-shown) {
+  background-image: none;
 }
