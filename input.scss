@@ -1,0 +1,22 @@
+input:where([type='checkbox']) {
+  width: 24px; // use rem when we know what the root font size is
+  height: 24px;
+  margin: 0;
+  border-radius: 4px;
+  display: inline-block;
+  cursor: pointer;
+  border: 2px solid var(--primary-reg-col);
+  :focus {
+    outline: 1px solid var(--primary-reg-col);
+    outline-offset: 1px;
+  }
+}
+
+input:where([type='search']) {
+  font-size: 0.875rem; 
+  padding-top: 0; 
+  padding-bottom: 0; 
+  height: 35px; 
+  min-width: 16rem; 
+  max-width: 100%; 
+}

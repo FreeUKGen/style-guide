@@ -1,6 +1,9 @@
+@use 'reset';
 @use 'tiny-grid';
 @use 'nav';
 @use 'bootstrap-shim';
+@use 'input';
+
 
 /** core variables **/
 $nav-height: 44px;
@@ -41,6 +44,14 @@ button, a.btn, select {
 	padding:0.6em 1.2em;
 	text-align:center;
 	border-radius: 5px;
+	cursor: pointer;
+	user-select: none;
+}
+
+button.icon-only {
+	background:  transparent;
+	border: 0;
+	padding: 0
 }
 
 table {
