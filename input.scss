@@ -2,7 +2,9 @@
 @to-do
 - use rem when we know what the root font size is
 - refactor when we have more input types to share global default and state styles
-- error focus-visible still has green box shadow
+- instead of using base64 img for tick and hyphen and colour variants, it might be
+more readable to include one tick svg and one hyphen svg, and manipulate its fill
+colour for the different states and variants.
 */
 
 input[type="search"] {
@@ -23,9 +25,7 @@ input[type="search"] {
 }
 
 input[type="search"]:focus-visible {
-  outline-style: solid;
-  outline-width: 1px;
-  outline-color: var(--primary-reg-col);
+  outline: 1px solid var(--primary-reg-col);
   outline-offset: 2px;
 }
 
@@ -33,168 +33,169 @@ input[type="search"]:not(:placeholder-shown) {
   background-image: none;
 }
 
-input[type="checkbox"]
-{
+input[type="checkbox"] {
   width: 24px;
   height: 24px;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+  transition: background-color 0.2s, box-shadow 0.2s;
   box-shadow: 0 0 0 2px var(--primary-reg-col);
 
-&::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center;
-  width: 16px;
-  height: 12px;
-}
-
-&:checked {
-  background-color: var(--primary-reg-col);
-  border-color: var(--primary-reg-col);
-
   &::before {
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTMiIHZpZXdCb3g9IjAgMCAxOCAxMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTYuNTQ5OTggMTNMMC44NDk5NzYgNy4yOTk5OEwyLjI3NDk4IDUuODc0OThMNi41NDk5OCAxMC4xNUwxNS43MjUgMC45NzQ5NzZMMTcuMTUgMi4zOTk5OEw2LjU0OTk4IDEzWiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+");
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    width: 16px;
+    height: 12px;
   }
-}
 
-&:focus-visible {
-  outline: 2px solid var(--primary-reg-col);
-  outline-offset: 3px;
-  &[aria-invalid="true"] {
-    box-shadow: 0 0 0 2px var(--error-col);
-  }
-}
-
-&:hover {
   &:checked {
-    background-color: var(--primary-back);
+    background-color: var(--primary-reg-col);
 
     &::before {
-      background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTMiIHZpZXdCb3g9IjAgMCAxOCAxMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTYuNTQ5OTggMTNMMC44NDk5NzYgNy4yOTk5OEwyLjI3NDk4IDUuODc0OThMNi41NDk5OCAxMC4xNUwxNS43MjUgMC45NzQ5NzZMMTcuMTUgMi4zOTk5OEw2LjU0OTk4IDEzWiIgZmlsbD0iIzAwODU3RSIvPgo8L3N2Zz4K");
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTMiIHZpZXdCb3g9IjAgMCAxOCAxMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTYuNTQ5OTggMTNMMC44NDk5NzYgNy4yOTk5OEwyLjI3NDk4IDUuODc0OThMNi41NDk5OCAxMC4xNUwxNS43MjUgMC45NzQ5NzZMMTcuMTUgMi4zOTk5OEw2LjU0OTk4IDEzWiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+");
     }
   }
-}
 
-&:focus-visible {
-  &:checked, {
-    box-shadow: 0 0 0 2px var(--primary-reg-col);
-  }
-}
-
-&:indeterminate {
-  background-color: var(--primary-reg-col);
-
-  &::before {
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMiIgdmlld0JveD0iMCAwIDE0IDIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0wIDJWMEgxNFYySDBaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K");
-    width: 12px;
-    height: 2px;
+  &:focus-visible {
+    outline: 2px solid var(--primary-reg-col);
+    outline-offset: 2px;
   }
 
   &:hover {
-    background-color: var(--unselected-bg-col);
-    //border-color: var(--unselected-bg-col);
-    &::before {
-      background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMiIgdmlld0JveD0iMCAwIDE0IDIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0wIDJWMEgxNFYySDBaIiBmaWxsPSIjMDA4NTdFIi8+Cjwvc3ZnPgo=");
+    &:checked {
+      background-color: var(--primary-back);
+
+      &::before {
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTMiIHZpZXdCb3g9IjAgMCAxOCAxMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTYuNTQ5OTggMTNMMC44NDk5NzYgNy4yOTk5OEwyLjI3NDk4IDUuODc0OThMNi41NDk5OCAxMC4xNUwxNS43MjUgMC45NzQ5NzZMMTcuMTUgMi4zOTk5OEw2LjU0OTk4IDEzWiIgZmlsbD0iIzAwODU3RSIvPgo8L3N2Zz4K");
+      }
     }
   }
 
-  &:disabled {
-    &::before {
-      background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMiIgdmlld0JveD0iMCAwIDE0IDIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0wIDJWMEgxNFYySDBaIiBmaWxsPSIjNDQ0NDQ0Ii8+Cjwvc3ZnPg==");
+  &:focus-visible {
+    &:checked, {
+      box-shadow: none;
     }
   }
 
-  &.error,
-  &[aria-invalid="true"] {
-    box-shadow: 0 0 0 2px var(--error-col);
-    background-color: var(--error-bg-col);
-    &:hover,
-    &:focus-visible {
-      box-shadow: 0 0 0 2px var(--error-col);
-      // Ensure the standard focus outline also uses the error color
-      &:focus-visible {
-        outline-color: var(--error-col);
+  &:indeterminate {
+    background-color: var(--primary-reg-col);
+
+    &::before {
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMiIgdmlld0JveD0iMCAwIDE0IDIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0wIDJWMEgxNFYySDBaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K");
+      width: 12px;
+      height: 2px;
+    }
+
+    &:hover {
+      background-color: var(--unselected-bg-col);
+
+      &::before {
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMiIgdmlld0JveD0iMCAwIDE0IDIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0wIDJWMEgxNFYySDBaIiBmaWxsPSIjMDA4NTdFIi8+Cjwvc3ZnPgo=");
       }
     }
 
-    // Error Checked/Indeterminate: Set background and border to error color
-    &:checked,
-    &:indeterminate {
+    &:disabled {
+      &::before {
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMiIgdmlld0JveD0iMCAwIDE0IDIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0wIDJWMEgxNFYySDBaIiBmaWxsPSIjNDQ0NDQ0Ii8+Cjwvc3ZnPg==");
+      }
+    }
+
+    &.error,
+    &[aria-invalid="true"] {
+      box-shadow: 0 0 0 2px var(--error-col);
       background-color: var(--error-bg-col);
 
       &:hover,
       &:focus-visible {
         box-shadow: 0 0 0 2px var(--error-col);
+        // Ensure the standard focus outline also uses the error color
+        &:focus-visible {
+          outline-color: var(--error-col);
+        }
       }
-    }
-    &:indeterminate {
-    &::before {
-      background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMiIgdmlld0JveD0iMCAwIDE0IDIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0wIDJWMEgxNFYySDBaIiBmaWxsPSIjREIwMDAwIi8+Cjwvc3ZnPgo=");
-    }
-    }
-    &:checked {
-      &:focus-visible {
-      box-shadow: 0 0 0 2px var(--error-col);
 
+      // Error Checked/Indeterminate: Set background and border to error color
+      &:checked,
+      &:indeterminate {
+        background-color: var(--error-bg-col);
+
+        &:hover,
+        &:focus-visible {
+          box-shadow: 0 0 0 2px var(--error-col);
+        }
+      }
+
+      &:indeterminate {
+        &::before {
+          background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMiIgdmlld0JveD0iMCAwIDE0IDIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0wIDJWMEgxNFYySDBaIiBmaWxsPSIjREIwMDAwIi8+Cjwvc3ZnPgo=");
+        }
+      }
+
+      &:checked {
+        &:focus-visible {
+          box-shadow: 0 0 0 2px var(--error-col);
+
+        }
       }
     }
   }
-}
 
   &.error,
   &[aria-invalid="true"] {
     box-shadow: 0 0 0 2px var(--error-col);
     background-color: var(--error-bg-col);
+
     &:hover {
       box-shadow: none;
       background-color: var(--error-bg-col);
     }
+
+    &:focus-visible {
+      outline-color: var(--error-col);
+    }
+
+    &:checked {
       &:focus-visible {
         outline-color: var(--error-col);
       }
-    &:checked {
+
       &::before {
         background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTMiIHZpZXdCb3g9IjAgMCAxOCAxMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTYuNTQ5OTggMTNMMC44NDk5NzYgNy4zMDAwMUwyLjI3NDk4IDUuODc1MDFMNi41NDk5OCAxMC4xNUwxNS43MjUgMC45NzUwMDZMMTcuMTUgMi40MDAwMUw2LjU0OTk4IDEzWiIgZmlsbD0iI0RCMDAwMCIvPgo8L3N2Zz4K");
       }
     }
   }
-&:disabled {
-  cursor: not-allowed;
-  box-shadow: 0 0 0 2px var(--disabled-bg-col);
-  background-color: var(--disabled-bg-col);
 
-  // Explicitly remove hover/focus styles (box-shadow, outline, background changes)
-  &:hover,
-  &:focus-visible {
-    background-color: var(--disabled-bg-col); // Re-apply static background
-    outline: none; // Remove focus ring
+  &:disabled {
+    cursor: not-allowed;
+    box-shadow: 0 0 0 2px var(--disabled-bg-col);
+    background-color: var(--disabled-bg-col);
+
+    &:hover,
+    &:focus-visible {
+      background-color: var(--disabled-bg-col);
+      outline: none;
+    }
+
+    &:checked,
+    &:indeterminate {
+      background-color: var(--disabled-bg-col);
+      box-shadow: 0 0 0 2px var(--disabled-col);
+    }
+
+    &:checked::before {
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTMiIHZpZXdCb3g9IjAgMCAxOCAxMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTYuNTQ5OTggMTNMMC44NDk5NzYgNy4yOTk5OEwyLjI3NDk4IDUuODc0OThMNi41NDk5OCAxMC4xNUwxNS43MjUgMC45NzQ5NzZMMTcuMTUgMi4zOTk5OEw2LjU0OTk4IDEzWiIgZmlsbD0iIzQ0NDQ0NCIvPgo8L3N2Zz4=");
+    }
+
+    &:indeterminate::before {
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMiIgdmlld0JveD0iMCAwIDE0IDIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0wIDJWMEgxNFYySDBaIiBmaWxsPSIjNDQ0NDQ0Ii8+Cjwvc3ZnPg==");
+      width: 12px;
+      height: 2px;
+    }
   }
-
-  // Disabled Checked/Indeterminate
-  &:checked,
-  &:indeterminate {
-    background-color: var(--disabled-bg-col); // Solid Grey background when checked
-    box-shadow: 0 0 0 2px var(--disabled-col);
-  }
-
-  // Ensure the specific disabled icon hashes are used for checked/indeterminate
-  &:checked::before {
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTMiIHZpZXdCb3g9IjAgMCAxOCAxMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTYuNTQ5OTggMTNMMC44NDk5NzYgNy4yOTk5OEwyLjI3NDk4IDUuODc0OThMNi41NDk5OCAxMC4xNUwxNS43MjUgMC45NzQ5NzZMMTcuMTUgMi4zOTk5OEw2LjU0OTk4IDEzWiIgZmlsbD0iIzQ0NDQ0NCIvPgo8L3N2Zz4=");
-  }
-
-  &:indeterminate::before {
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMiIgdmlld0JveD0iMCAwIDE0IDIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0wIDJWMEgxNFYySDBaIiBmaWxsPSIjNDQ0NDQ0Ii8+Cjwvc3ZnPg==");
-    // Ensure the dash style is reapplied
-    width: 12px;
-    height: 2px;
-  }
-}
-
 }
