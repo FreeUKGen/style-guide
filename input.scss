@@ -33,6 +33,9 @@ input[type="search"]:not(:placeholder-shown) {
   background-image: none;
 }
 
+// -------------------------------------------------------------------
+// Base styles for checkbox: https://stackoverflow.com/a/27779075
+// -------------------------------------------------------------------
 input[type="checkbox"] {
   width: 24px;
   height: 24px;
@@ -54,6 +57,10 @@ input[type="checkbox"] {
     height: 12px;
   }
 
+  // -------------------------------------------------------------------
+  // LOGICAL States (Selected / Indeterminate)
+  // -------------------------------------------------------------------
+
   &:checked {
     background-color: var(--primary-reg-col);
 
@@ -62,9 +69,9 @@ input[type="checkbox"] {
     }
   }
 
-  &:focus-visible {
-    outline: 2px solid var(--primary-reg-col);
-    outline-offset: 2px;
+  &:hover {
+    background-color: var(--unselected-bg-col);
+    box-shadow: none;
   }
 
   &:hover {
@@ -78,6 +85,8 @@ input[type="checkbox"] {
   }
 
   &:focus-visible {
+    outline: 2px solid var(--primary-reg-col);
+    outline-offset: 2px;
     &:checked, {
       box-shadow: none;
     }
@@ -85,7 +94,6 @@ input[type="checkbox"] {
 
   &:indeterminate {
     background-color: var(--primary-reg-col);
-
     &::before {
       background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMiIgdmlld0JveD0iMCAwIDE0IDIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0wIDJWMEgxNFYySDBaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K");
       width: 12px;
@@ -100,51 +108,20 @@ input[type="checkbox"] {
       }
     }
 
+    &:focus-visible {
+      box-shadow: none;
+    }
+
     &:disabled {
       &::before {
         background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMiIgdmlld0JveD0iMCAwIDE0IDIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0wIDJWMEgxNFYySDBaIiBmaWxsPSIjNDQ0NDQ0Ii8+Cjwvc3ZnPg==");
       }
     }
-
-    &.error,
-    &[aria-invalid="true"] {
-      box-shadow: 0 0 0 2px var(--error-col);
-      background-color: var(--error-bg-col);
-
-      &:hover,
-      &:focus-visible {
-        box-shadow: 0 0 0 2px var(--error-col);
-        // Ensure the standard focus outline also uses the error color
-        &:focus-visible {
-          outline-color: var(--error-col);
-        }
-      }
-
-      // Error Checked/Indeterminate: Set background and border to error color
-      &:checked,
-      &:indeterminate {
-        background-color: var(--error-bg-col);
-
-        &:hover,
-        &:focus-visible {
-          box-shadow: 0 0 0 2px var(--error-col);
-        }
-      }
-
-      &:indeterminate {
-        &::before {
-          background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMiIgdmlld0JveD0iMCAwIDE0IDIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0wIDJWMEgxNFYySDBaIiBmaWxsPSIjREIwMDAwIi8+Cjwvc3ZnPgo=");
-        }
-      }
-
-      &:checked {
-        &:focus-visible {
-          box-shadow: 0 0 0 2px var(--error-col);
-
-        }
-      }
-    }
   }
+
+  // -------------------------------------------------------------------
+  // Error States (maintains its own interactions styles)
+  // -------------------------------------------------------------------
 
   &.error,
   &[aria-invalid="true"] {
@@ -170,6 +147,10 @@ input[type="checkbox"] {
       }
     }
   }
+
+  // -------------------------------------------------------------------
+  // Disabled State (No interaction styles)
+  // -------------------------------------------------------------------
 
   &:disabled {
     cursor: not-allowed;
