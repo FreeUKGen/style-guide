@@ -1,26 +1,21 @@
 
-$color: #616060;
 $nav-height:44px;
 $bar-height:4px;
-$background:#fff;
-
-$fg-hover:#000;
-$bg-hover: #caf1ca;
-$color-select:#000;
 $breakpoint:600px;
 
 nav {
 	display:flex;
 	justify-content: space-between;
 	align-items: center;
-	color:white;
+	color: var(--nav-fgcol);
 	height: var(--nav-height);
-	background: var(--primary-reg-col);
+	background: var(--nav-bgcol);
 
 	a.logo {
-		background:white;
+		color: var(--nav-fgcol);
 		img {
-			height: $nav-height;
+			background: var(--nav-fgcol);
+			max-width:250px;
 		}
 	}
 	ul {
@@ -30,7 +25,7 @@ nav {
 			display:inline-block;
 			transition-duration: 0.3s;
 			list-style: none;
-			padding:0.8em 0.8em;
+			padding:1em;
 			margin:0 1.2em;
 			cursor: pointer;
 			ul {
@@ -38,15 +33,16 @@ nav {
 				display:none;
 			}
 			&:hover {
-				color:black;
-				background: $bg-hover;
+				color: var(--nav-hover-fgcol);
+				background: var(--nav-hover-bgcol);
 				position:relative;
 				ul {
-					background:white;
+					background:var(--nav-drop-bgcol);
+					color:var(--nav-drop-fgcol);
 					position:absolute;
 					left:0;
-					top:2.8em;
-					width:200px;
+					top:2.9em;
+					width:220px;
 					display:flex;
 					flex-direction: column;
 					padding:0 0.2em;
@@ -55,7 +51,7 @@ nav {
 						margin:0;
 						outline:1px solid transparent;
 						&:hover {
-							background: $bg-hover;
+							background: var(--nav-hover-bgcol);
 
 							outline:1px solid #aaa;
 						}
@@ -64,12 +60,11 @@ nav {
 			}
 
 			a {
-				color:white;
 				text-decoration: none;
 			}
 			&.active {
 				a {
-					color: $color-select;
+					color: var(--nav-hover-bgcol);
 				}
 			}
 		}
@@ -79,7 +74,7 @@ nav {
 	}
 
 	section.menu {
-		background: $background;
+		background: var(--nav-fgcol);
 		cursor: pointer;
 		padding: 2px;
 
@@ -94,13 +89,13 @@ nav {
 			height: $bar-height;
 			margin: 3px auto;
 			border-radius: 3px;
-			background: $color;
+			background: var(--nav-bgcol);
 		}
 
 		&.active {
-			background: #575757;
+			background: #575757;   // @TODO
 			.menu-bar {
-				background: white;
+				background: var(--nav-fgcol);;
 			}
 		}
 		@media screen and (min-width: $breakpoint) {
@@ -123,7 +118,7 @@ section.menu-click {
 
 	li {
 		display:block;
-		color:white;
+		color: var(--nav-fgcol);
 		padding:3px;
 	}
 

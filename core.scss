@@ -6,38 +6,45 @@
 $nav-height: 44px;
 
 :root {
-	--nav-col: #fff; 		     	// Primary Nav colour
-	--primary-col: #e6f6e5;      	// Primary colour
-	--primary-reg-col: #015c57; 	// Primary FreeREG colour
-	--primary-back: white;    		// Primary background
-	--primary-accent-col: #517481;
-	--primary-accent-font-col: #364d55;
+	--body-bgcol: white;    			// Primary background
+	--body-fgcol: black;    			// Primary background
 
-	--reg-back: #007fad;
-	--reg-col: #b8ecff;
+	--btn-fgcol: white;
+	--btn-bgcol: #00857e;
 
-	--error-col: #d80000;
-	--success-col: #009000;
+	--nav-fgcol: #fff;
+	--nav-bgcol: #007fad;
+	--nav-height: 44px;
+	--nav-hover-fgcol: white;
+	--nav-hover-bgcol: #005f80;
+	--nav-drop-fgcol: black;
+	--nav-drop-bgcol: #eee;
+
+	--href-fgcol: #00857e;
+
+	--thead-bgcol: #ebebeb;
+
+	--error-fgcol: #d80000;
+	--success-fgcol: #009000;
 
 	--gutter: 10px;
-
 	font-family: 'Open Sans', sans-serif;
-	--nav-height: 44px;
 }
 
 // high level pan-project styling
 body {
 	margin: 0;
-	background-color: var(--primary-back);
+	color: var(--body-fgcol);
+	background-color: var(--body-bgcol);
 }
 
 a {
-	color: var(--primary-reg-col);
+	color: var(--href-fgcol);
 }
 
 button, a.btn, select {
-	background: var(--primary-reg-col);
-	color:white;
+	color: var(--btn-fgcol);
+	background: var(--btn-bgcol);
 	padding:0.6em 1.2em;
 	text-align:center;
 	border-radius: 5px;
@@ -51,11 +58,10 @@ input  {
 }
 
 table {
-	background: lightgrey;
 	border:none;
 	border-collapse: collapse;
 	thead {
-		background:lightgrey;
+		background: var(--thead-bgcol);
 		color:black;
 		font-weight:normal;
 		th {
