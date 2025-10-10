@@ -39,22 +39,42 @@ SCSS grid framework. Benefits of tiny-grid:
 
 
 ## Examples
-#### Indentation (`TAB`)
+### Indentation (`TAB`)
     nav {
         height: 44px; 
         color: $reg-nav-col;
         width: 100%;
     }
 
-#### CSS Properties
+### CSS Properties
 
-    :root {
-        --primary-col: #00857e;     # Primary colour
-        --primary-reg-col: #00857e; # Primary FreeREG colour
-        --primary-back: #e6f6e5;    # Primary background
-        --primary-accent-col: #517481;
-        --primary-accent-font-col
-    }
+#### General naming pattern
+[element-name]-[fgcol|bgcol]
+```
+:root {
+    --body-bgcol: white;    			// Primary background
+    --body-fgcol: black;    			// Primary background
+    
+	--btn-fgcol: white;
+	--btn-bgcol: #00857e;
+
+	--nav-fgcol: #fff;
+	--nav-bgcol: #007fad;
+	--nav-height: 44px;
+	--nav-hover-fgcol: white;
+	--nav-hover-bgcol: #005f80;
+	--nav-drop-fgcol: black;
+	--nav-drop-bgcol: #eee;
+
+	--href-fgcol: #00857e;
+
+	--error-fgcol: #d80000;
+	--success-fgcol: #009000;
+
+	--gutter: 10px;
+	font-family: 'Open Sans', sans-serif;
+}
+```
 
 
 ## Further Development
