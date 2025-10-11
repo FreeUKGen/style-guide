@@ -9,16 +9,26 @@
 $nav-height: 44px;
 
 :root {
-	--nav-col: #fff; 		     	// Primary Nav colour
-	--primary-col: #e6f6e5;      	// Primary colour
-	--primary-reg-col: #015c57; 	// Primary FreeREG colour
-	--primary-back: white;    		// Primary background
-	--primary-accent-col: #517481;
-	--primary-accent-font-col: #364d55;
+	--body-bgcol: white;    			// Primary background
+	--body-fgcol: black;    			// Primary background
 
-	--reg-back: #007fad;
-	--reg-col: #b8ecff;
+	--btn-fgcol: white;
+	--btn-bgcol: #00857e;
 
+	--nav-fgcol: #fff;
+	--nav-bgcol: #007fad;
+	--nav-height: 44px;
+	--nav-hover-fgcol: white;
+	--nav-hover-bgcol: #005f80;
+	--nav-drop-fgcol: black;
+	--nav-drop-bgcol: #eee;
+
+	--href-fgcol: #00857e;
+
+	--thead-bgcol: #ebebeb;
+
+	--error-fgcol: #d80000;
+	--success-fgcol: #009000;
 	--error-col: #d80000;
 	--error-bg-col: #FAECEC;
 	--success-col: #009000;
@@ -27,29 +37,30 @@ $nav-height: 44px;
 	--unselected-bg-col: #E6F6F5;
 
 	--gutter: 10px;
-
 	font-family: 'Open Sans', sans-serif;
-	--nav-height: 44px;
 }
 
 // high level pan-project styling
 body {
-	margin: 0;
-	background-color: var(--primary-back);
+  margin: 0;
+  background-color: var(--primary-back);
 }
 
 a {
-	color: var(--primary-reg-col);
+  color: var(--primary-reg-col);
+}
+
+a {
+	color: var(--href-fgcol);
 }
 
 button, a.btn, select {
-	background: var(--primary-reg-col);
-	color:white;
+	color: var(--btn-fgcol);
+	background: var(--btn-bgcol);
 	padding:0.6em 1.2em;
 	text-align:center;
 	border-radius: 5px;
 	cursor: pointer;
-	user-select: none;
 }
 
 button.icon-only {
@@ -66,11 +77,28 @@ input  {
 }
 
 table {
-	background: lightgrey;
+  background: lightgrey;
+  border: none;
+  border-collapse: collapse;
+  thead {
+    background: lightgrey;
+    color: black;
+    font-weight: normal;
+    th {
+      padding: 0.3em;
+      text-align: left;
+    }
+  }
+  tbody {
+    background: white;
+    td {
+      text-align: left;
+    }
+  }
 	border:none;
 	border-collapse: collapse;
 	thead {
-		background:lightgrey;
+		background: var(--thead-bgcol);
 		color:black;
 		font-weight:normal;
 		th {
@@ -87,8 +115,62 @@ table {
 }
 
 /* utility classes */
-.gutter 	{ margin:0 var(--gutter); }
-.error 	{ color: var(--error-col); }
-.success { color: var(--success-col); }
-.none 	{ display:none; }
-.block 	{ display:block; }
+.gutter {
+  margin: 0 var(--gutter);
+}
+.error {
+  color: var(--error-col);
+}
+.success {
+  color: var(--success-col);
+}
+.none {
+  display: none;
+}
+.block {
+  display: block;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.button {
+  background-color: #007fad;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 600;
+  padding: calc(1rem - 2px);
+  width: 16rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 4px;
+  font-size: 16px;
+
+  display: inline-block;
+  letter-spacing: 0.03rem;
+  margin: 0 10px 10px;
+}
+
+.button-hover:hover {
+  box-sizing: border-box;
+
+  border: 2px solid #007fad;
+  background-color: #fff;
+  color: #007fad;
+  transition: none;
+}
+.button-disabled {
+  background-color: #f4f4f4;
+  color: #444444;
+}
+
+.button-focus:focus {
+  box-sizing: border-box;
+  border: 2px solid white;
+  box-sizing: border-box;
+  transition: none;
+}

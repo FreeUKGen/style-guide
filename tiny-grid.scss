@@ -41,11 +41,12 @@
 		@extend %container-base;
 	}
 
+	// TODO DS this interferes with bootstrap-shim
 	.row {
-		margin-left: math.div($grid-gutter, -2);
-		margin-right: math.div($grid-gutter, -2);
+/*		margin-left: math.div($grid-gutter, -2);
+		margin-right: math.div($grid-gutter, -2);*/
 		box-sizing: border-box;
-		font-size: 0;
+		// font-size: 0;
 
 		> * {
 			font-size: 1rem;
