@@ -1,0 +1,18 @@
+
+form {
+	label {
+		width:7em;
+		display:inline-block;
+		text-align:left;
+		&.right {
+			text-align:right;
+		}
+	}
+	section {
+		margin: 1em 0;
+	}
+}
+
+select {
+	cursor:pointer;
+}

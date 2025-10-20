@@ -1,6 +1,7 @@
 @use "tiny-grid";
 @use "nav";
 @use "bootstrap-shim";
+@use "controls";
 
 /** core variables **/
 $nav-height: 44px;
@@ -57,8 +58,16 @@ button, a.btn {
 }
 
 select {
-	padding:0.6em 0;
+	padding:0.6em 0.3em;
 	border:1px solid #777;
+}
+
+textarea {
+	color: var(--btn-fgcol);
+	background: #ddd;
+	padding:0.6em 1.2em;
+	height: 6em;
+	width: 10em;
 }
 
 input  {
@@ -134,17 +143,12 @@ table {
   text-decoration: none;
   cursor: pointer;
   font-weight: 600;
-  padding: calc(1rem - 2px);
-  width: 16rem;
+  padding: 0.5em 1em;
   text-align: center;
   transition: all 0.3s ease;
   font-family: Arial, Helvetica, sans-serif;
   border-radius: 4px;
-  font-size: 16px;
-
   display: inline-block;
-  letter-spacing: 0.03rem;
-  margin: 0 10px 10px;
 }
 
 .button-hover:hover {
