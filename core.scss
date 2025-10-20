@@ -43,11 +43,19 @@ a {
 }
 
 button, a.btn, select {
+	text-align:center;
+	border-radius: 5px;
+}
+
+button, a.btn {
 	color: var(--btn-fgcol);
 	background: var(--btn-bgcol);
 	padding:0.6em 1.2em;
-	text-align:center;
-	border-radius: 5px;
+}
+
+select {
+	padding:0.6em 0;
+	border:1px solid #777;
 }
 
 input  {
