@@ -1,8 +1,8 @@
-@use "tiny-grid";
-@use "nav";
-@use "bootstrap-shim";
-@use "controls";
-@use "headings";
+@use 'reset';
+@use 'tiny-grid';
+@use 'nav';
+@use 'bootstrap-shim';
+@use 'input';
 
 /** core variables **/
 $nav-height: 44px;
@@ -28,7 +28,11 @@ $nav-height: 44px;
 	--head-fgcol: #888;
 
 	--error-fgcol: #d80000;
+	--error-bg-col: #FAECEC;
 	--success-fgcol: #009000;
+	--disabled-col: #707070;
+	--disabled-bg-col: #F4F4F4;
+	--unselected-bg-col: #E6F6F5;
 
 	--gutter: 10px;
 	font-family: 'Open Sans', sans-serif;
@@ -57,19 +61,15 @@ button, a.btn {
 	color: var(--btn-fgcol);
 	background: var(--btn-bgcol);
 	padding:0.6em 1.2em;
+	text-align:center;
+	border-radius: 5px;
+	cursor: pointer;
 }
 
-select {
-	padding:0.6em 0.3em;
-	border:1px solid #777;
-}
-
-textarea {
-	color: var(--btn-fgcol);
-	background: #ddd;
-	padding:0.6em 1.2em;
-	height: 6em;
-	width: 15em;
+button.icon-only {
+	background:  transparent;
+	border: 0;
+	padding: 0
 }
 
 input  {
