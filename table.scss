@@ -1,0 +1,22 @@
+
+table {
+	background: lightgrey;
+	border: none;
+	border-collapse: collapse;
+	thead {
+		background: lightgrey;
+		color: black;
+		font-weight: normal;
+		th {
+			padding: 0.3em;
+			text-align: left;
+		}
+	}
+	tbody {
+		background: white;
+		td {
+			text-align: left;
+			padding:0.1em 0.2em;
+		}
+	}
+}
