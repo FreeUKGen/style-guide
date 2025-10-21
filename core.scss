@@ -4,7 +4,6 @@
 @use 'bootstrap-shim';
 @use 'input';
 
-
 /** core variables **/
 $nav-height: 44px;
 
@@ -13,7 +12,7 @@ $nav-height: 44px;
 	--body-fgcol: black;    			// Primary background
 
 	--btn-fgcol: white;
-	--btn-bgcol: #00857e;
+	--btn-bgcol: #007fad;
 
 	--nav-fgcol: #fff;
 	--nav-bgcol: #007fad;
@@ -26,6 +25,7 @@ $nav-height: 44px;
 	--href-fgcol: #00857e;
 
 	--thead-bgcol: #ebebeb;
+	--head-fgcol: #888;
 
 	--error-fgcol: #d80000;
 	--error-bg-col: #FAECEC;
@@ -53,6 +53,11 @@ a {
 }
 
 button, a.btn, select {
+	text-align:center;
+	border-radius: 5px;
+}
+
+button, a.btn {
 	color: var(--btn-fgcol);
 	background: var(--btn-bgcol);
 	padding:0.6em 1.2em;
@@ -93,41 +98,16 @@ table {
       text-align: left;
     }
   }
-	border:none;
-	border-collapse: collapse;
-	thead {
-		background: var(--thead-bgcol);
-		color:black;
-		font-weight:normal;
-		th {
-			padding: 0.3em;
-			text-align:left;
-		}
-	}
-	tbody {
-		background: white;
-		td {
-			text-align:left;
-		}
-	}
 }
 
 /* utility classes */
-.gutter {
-  margin: 0 var(--gutter);
-}
-.error {
-  color: var(--error-col);
-}
-.success {
-  color: var(--success-col);
-}
-.none {
-  display: none;
-}
-.block {
-  display: block;
-}
+.gutter  { margin: 0 var(--gutter); }
+.error   { color: var(--error-col); }
+.success { color: var(--success-col); }
+
+.none   { display: none; }
+.block  { display: block; }
+.inline { display: inline; }
 
 .buttons {
   display: flex;
@@ -140,17 +120,12 @@ table {
   text-decoration: none;
   cursor: pointer;
   font-weight: 600;
-  padding: calc(1rem - 2px);
-  width: 16rem;
+  padding: 0.5em 1em;
   text-align: center;
   transition: all 0.3s ease;
   font-family: Arial, Helvetica, sans-serif;
   border-radius: 4px;
-  font-size: 16px;
-
   display: inline-block;
-  letter-spacing: 0.03rem;
-  margin: 0 10px 10px;
 }
 
 .button-hover:hover {
