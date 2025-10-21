@@ -1,0 +1,43 @@
+
+button, a.btn, select {
+  text-align:center;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid var(--border-fgcol)
+}
+
+select {
+  padding: var(--input-vert-padding) 0.3em;
+  appearance: auto; // this turns caret on after reset
+}
+
+button, a.btn {
+  color: var(--btn-fgcol);
+  background: var(--btn-bgcol);
+  text-decoration: none;
+  padding:  var(--input-vert-padding) 1em;
+  transition: all 0.3s ease;
+
+  &.icon-only {
+    background:  transparent;
+    border: 0;
+    padding: 0
+  }
+
+  &:hover {
+    box-sizing: content-box;
+    outline: 2px solid #007fad;
+    background-color: #fff;
+    color: #007fad;
+    transition: none;
+  }
+  &:focus {
+    box-sizing: border-box;
+    border: 2px solid white;
+    transition: none;
+  }
+  &:disabled {
+    background-color: #f4f4f4;
+    color: #444444;
+  }
+}

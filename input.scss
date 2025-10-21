@@ -6,6 +6,11 @@
 more readable to include one tick svg and one hyphen svg, and manipulate its fill
 colour for the different states and variants.
 */
+input  {
+  padding:0.5em;
+  background: #ddd;
+  border-radius: 3px;
+}
 
 input[type="search"] {
   display: block;
