@@ -6,62 +6,65 @@
 more readable to include one tick svg and one hyphen svg, and manipulate its fill
 colour for the different states and variants.
 */
-input  {
-  padding:0.5em;
-  background: #ddd;
-  border-radius: 3px;
+input, textarea  {
+	padding:0.5em;
+	background: #fff;
+	border-radius: 4px;
+	border: 1px solid var(--border-fgcol);
+}
+
+textarea {
+	min-height: 5em;
+	width: 22em;
 }
 
 input[type="search"] {
-  display: block;
-  font-size: 0.875rem;
-  line-height: 1;
-  padding: 10px 10px 10px 24px;
-  min-height: 44px;
-  min-width: 16rem;
-  max-width: 320px;
-  width: 100%;
-  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2LjYgMThMMTAuMyAxMS43QzkuOCAxMi4xIDkuMjI1IDEyLjQxNjcgOC41NzUgMTIuNjVDNy45MjUgMTIuODgzMyA3LjIzMzMzIDEzIDYuNSAxM0M0LjY4MzMzIDEzIDMuMTQ2IDEyLjM3MDcgMS44ODggMTEuMTEyQzAuNjMgOS44NTMzMyAwLjAwMDY2NzE5NiA4LjMxNiA1LjI5MTAxZS0wNyA2LjVDLTAuMDAwNjY2MTM4IDQuNjg0IDAuNjI4NjY3IDMuMTQ2NjcgMS44ODggMS44ODhDMy4xNDczMyAwLjYyOTMzMyA0LjY4NDY3IDAgNi41IDBDOC4zMTUzMyAwIDkuODUzIDAuNjI5MzMzIDExLjExMyAxLjg4OEMxMi4zNzMgMy4xNDY2NyAxMy4wMDIgNC42ODQgMTMgNi41QzEzIDcuMjMzMzMgMTIuODgzMyA3LjkyNSAxMi42NSA4LjU3NUMxMi40MTY3IDkuMjI1IDEyLjEgOS44IDExLjcgMTAuM0wxOCAxNi42TDE2LjYgMThaTTYuNSAxMUM3Ljc1IDExIDguODEyNjcgMTAuNTYyNyA5LjY4OCA5LjY4OEMxMC41NjMzIDguODEzMzMgMTEuMDAwNyA3Ljc1MDY3IDExIDYuNUMxMC45OTkzIDUuMjQ5MzMgMTAuNTYyIDQuMTg3IDkuNjg4IDMuMzEzQzguODE0IDIuNDM5IDcuNzUxMzMgMi4wMDEzMyA2LjUgMkM1LjI0ODY3IDEuOTk4NjcgNC4xODYzMyAyLjQzNjMzIDMuMzEzIDMuMzEzQzIuNDM5NjcgNC4xODk2NyAyLjAwMiA1LjI1MiAyIDYuNUMxLjk5OCA3Ljc0OCAyLjQzNTY3IDguODEwNjcgMy4zMTMgOS42ODhDNC4xOTAzMyAxMC41NjUzIDUuMjUyNjcgMTEuMDAyNyA2LjUgMTFaIiBmaWxsPSIjNzA3MDcwIi8+Cjwvc3ZnPg==");
-  background-repeat: no-repeat;
-  background-position: right 0.5rem center;
-  background-size: 0.9rem;
-  border-radius: 4px;
-  border: 1px solid black;
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1;
+	padding: 10px 10px 10px 24px;
+	min-height: 44px;
+	min-width: 16rem;
+	max-width: 320px;
+	width: 100%;
+	background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2LjYgMThMMTAuMyAxMS43QzkuOCAxMi4xIDkuMjI1IDEyLjQxNjcgOC41NzUgMTIuNjVDNy45MjUgMTIuODgzMyA3LjIzMzMzIDEzIDYuNSAxM0M0LjY4MzMzIDEzIDMuMTQ2IDEyLjM3MDcgMS44ODggMTEuMTEyQzAuNjMgOS44NTMzMyAwLjAwMDY2NzE5NiA4LjMxNiA1LjI5MTAxZS0wNyA2LjVDLTAuMDAwNjY2MTM4IDQuNjg0IDAuNjI4NjY3IDMuMTQ2NjcgMS44ODggMS44ODhDMy4xNDczMyAwLjYyOTMzMyA0LjY4NDY3IDAgNi41IDBDOC4zMTUzMyAwIDkuODUzIDAuNjI5MzMzIDExLjExMyAxLjg4OEMxMi4zNzMgMy4xNDY2NyAxMy4wMDIgNC42ODQgMTMgNi41QzEzIDcuMjMzMzMgMTIuODgzMyA3LjkyNSAxMi42NSA4LjU3NUMxMi40MTY3IDkuMjI1IDEyLjEgOS44IDExLjcgMTAuM0wxOCAxNi42TDE2LjYgMThaTTYuNSAxMUM3Ljc1IDExIDguODEyNjcgMTAuNTYyNyA5LjY4OCA5LjY4OEMxMC41NjMzIDguODEzMzMgMTEuMDAwNyA3Ljc1MDY3IDExIDYuNUMxMC45OTkzIDUuMjQ5MzMgMTAuNTYyIDQuMTg3IDkuNjg4IDMuMzEzQzguODE0IDIuNDM5IDcuNzUxMzMgMi4wMDEzMyA2LjUgMkM1LjI0ODY3IDEuOTk4NjcgNC4xODYzMyAyLjQzNjMzIDMuMzEzIDMuMzEzQzIuNDM5NjcgNC4xODk2NyAyLjAwMiA1LjI1MiAyIDYuNUMxLjk5OCA3Ljc0OCAyLjQzNTY3IDguODEwNjcgMy4zMTMgOS42ODhDNC4xOTAzMyAxMC41NjUzIDUuMjUyNjcgMTEuMDAyNyA2LjUgMTFaIiBmaWxsPSIjNzA3MDcwIi8+Cjwvc3ZnPg==");
+	background-repeat: no-repeat;
+	background-position: right 0.5rem center;
+	background-size: 0.9rem;
 }
 
 input[type="search"]:focus-visible {
-  outline: 1px solid var(--primary-reg-col);
-  outline-offset: 2px;
+	outline: 1px solid var(--primary-reg-col);
+	outline-offset: 2px;
 }
 
 input[type="search"]:not(:placeholder-shown) {
-  background-image: none;
+	background-image: none;
 }
 
 // -------------------------------------------------------------------
 // Base styles for checkbox: https://stackoverflow.com/a/27779075
 // -------------------------------------------------------------------
 input[type="checkbox"] {
-  width: 24px;
-  height: 24px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.2s, box-shadow 0.2s;
-  box-shadow: 0 0 0 2px var(--href-fgcol);
-  background-color: var(--body-bgcol);
-  border: none;
+	width: 24px;
+	height: 24px;
+	cursor: pointer;
+	transition: background-color 0.2s, box-shadow 0.2s;
+	box-shadow: 0 0 0 2px var(--href-fgcol);
+	background-color: var(--body-bgcol);
+	border: none;
 
   &::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center;
-    width: 16px;
-    height: 12px;
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background-repeat: no-repeat;
+		background-size: 100%;
+		background-position: center;
+		width: 16px;
+		height: 12px;
   }
 
   // -------------------------------------------------------------------
@@ -69,7 +72,7 @@ input[type="checkbox"] {
   // -------------------------------------------------------------------
 
   &:checked {
-    background-color: var(--btn-bgcol);
+	  background-color: var(--btn-bgcol);
 
     &::before {
       background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTMiIHZpZXdCb3g9IjAgMCAxOCAxMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTYuNTQ5OTggMTNMMC44NDk5NzYgNy4yOTk5OEwyLjI3NDk4IDUuODc0OThMNi41NDk5OCAxMC4xNUwxNS43MjUgMC45NzQ5NzZMMTcuMTUgMi4zOTk5OEw2LjU0OTk4IDEzWiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+");
