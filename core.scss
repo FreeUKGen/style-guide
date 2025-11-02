@@ -89,3 +89,19 @@ a {
 .block  { display: block; }
 .inline { display: inline; }
 .inline-block { display: inline-block; }
+
+.w1		{ width: var(--size-1) }
+.w2		{ width: var(--size-2) }
+.w3		{ width: var(--size-3) }
+.w4		{ width: var(--size-4) }
+.w5		{ width: var(--size-5) }
+.w6		{ width: var(--size-6) }
+.w7		{ width: var(--size-7) }
+.w8		{ width: var(--size-8) }
+.w9		{ width: var(--size-9) }
+.w10	{ width: var(--size-10) }
+.w12	{ width: var(--size-12) }
+.w14	{ width: var(--size-14) }
+.w16	{ width: var(--size-16) }
+.w18	{ width: var(--size-18) }
+.w20	{ width: var(--size-20) }
