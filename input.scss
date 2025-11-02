@@ -13,9 +13,6 @@ input, textarea  {
 	border: 1px solid var(--border-fgcol);
 
 	transition: opacity 0.8s;
-	&:focus {
-		background: var(--focus-bgcol);
-	}
 	&.hidden {
 		opacity: 0;
 		pointer-events: none;
@@ -26,6 +23,10 @@ input, textarea  {
 input, textarea, select {
 	&:focus {
 		background: var(--focus-bgcol);
+	}
+
+	&:focus-visible {
+		background: var(--btn-bgcol);
 	}
 }
 
