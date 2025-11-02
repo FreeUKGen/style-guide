@@ -11,11 +11,28 @@ input, textarea  {
 	background: #fff;
 	border-radius: 4px;
 	border: 1px solid var(--border-fgcol);
+
+	transition: opacity 0.8s;
+	&.hidden {
+		opacity: 0;
+		pointer-events: none;
+		border:none;
+	}
 }
 
 textarea {
 	min-height: 5em;
 	width: 22em;
+}
+
+label {
+	margin-right:0.4em;
+	transition: opacity 1s;
+	&.hidden {
+		opacity: 0;
+		pointer-events: none;
+		border:none;
+	}
 }
 
 input[type="search"] {
