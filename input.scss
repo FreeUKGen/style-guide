@@ -23,6 +23,12 @@ input, textarea  {
 	}
 }
 
+input, textarea, select {
+	&:focus {
+		background: var(--focus-bgcol);
+	}
+}
+
 textarea {
 	min-height: 5em;
 	width: 22em;
