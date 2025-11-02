@@ -13,6 +13,9 @@ input, textarea  {
 	border: 1px solid var(--border-fgcol);
 
 	transition: opacity 0.8s;
+	&:focus {
+		background: var(--focus-bgcol);
+	}
 	&.hidden {
 		opacity: 0;
 		pointer-events: none;
@@ -26,7 +29,7 @@ textarea {
 }
 
 label {
-	margin-right:0.4em;
+	margin-right:0.5em;
 	transition: opacity 1s;
 	&.hidden {
 		opacity: 0;
