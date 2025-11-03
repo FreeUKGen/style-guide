@@ -7,6 +7,7 @@
 @use 'carousel';
 @use 'table';
 @use 'form';
+@use 'toast';
 
 /** core variables **/
 $nav-height: 44px;
@@ -19,6 +20,8 @@ $nav-height: 44px;
 	--btn-bgcol: #007fad;
 
 	--primary-reg-color: #007fad;
+	--secondary-reg-color: #00857e;
+
 	--nav-fgcol: #fff;
 	--nav-bgcol: #007fad;
 	--nav-height: 44px;

@@ -1,0 +1,31 @@
+
+/* Toast notification styling */
+.toast-container {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1050;
+}
+
+.toast-error {
+	background-color: #dc3545;
+	color: white;
+	border: none;
+}
+
+.toast-error .toast-header {
+	background-color: #dc3545;
+	border-bottom: none;
+}
+
+.toast-success {
+	background-color: var(--secondary-reg-color);
+	color: white;
+	border: none;
+}
+
+.toast-success .toast-header {
+	background-color: var(--secondary-reg-color);
+	border-bottom: none;
+}
