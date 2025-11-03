@@ -21,6 +21,7 @@ input, textarea  {
 }
 
 input, textarea, select {
+	background: var(--input-bgcol);
 	&:focus {
 		background: var(--focus-bgcol);
 	}
