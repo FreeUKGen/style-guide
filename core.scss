@@ -65,6 +65,9 @@ $nav-height: 44px;
 	--size-16: 16em;
 	--size-18: 18em;
 	--size-20: 20em;
+	--size-30: 30em;
+	--size-40: 40em;
+	--size-50: 50em;
 
 	font-family: sans-serif;
 }
@@ -110,4 +113,7 @@ a {
 .w16	{ width: var(--size-16) }
 .w18	{ width: var(--size-18) }
 .w20	{ width: var(--size-20) }
+.w30	{ width: var(--size-30) }
+.w40	{ width: var(--size-40) }
+.w50	{ width: var(--size-50) }
 .w100	{ width: 100%; }
