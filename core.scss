@@ -97,6 +97,9 @@ a {
 .block  { display: block; }
 .inline { display: inline; }
 .inline-block { display: inline-block; }
+.flex		{ display:flex; }
+.base 	{ align-items:baseline; }
+.apart 	{ justify-content: space-between; }
 
 .w1		{ width: var(--size-1) }
 .w2		{ width: var(--size-2) }
