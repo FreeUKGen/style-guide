@@ -1,0 +1,107 @@
+header {
+  width: 100%;
+  margin-bottom: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2em 0 0;
+
+  & .image-container {
+    max-width: 16em;
+
+    & > p {
+      font-size: small;
+      text-align: center;
+    }
+
+    &:first-child {
+      margin-bottom: 1em;
+    }
+  }
+}
+
+main {
+  margin-bottom: 2em;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  & .image-container {
+    max-width: 14em;
+    margin: 0;
+  }
+
+  & .login {
+    padding: 2em;
+
+    &__intro {
+      line-height: 1.6;
+      margin: 2em 0 1.6em;
+    }
+
+    &__select {
+      display: flex;
+      justify-content: space-evenly;
+      gap: 1em;
+      margin-bottom: 1.6em;
+
+      & a {
+        display: block;
+
+        &.active {
+          border: 1px solid var(--primary-reg-color);
+        }
+
+        & > img {
+          width: 100%;
+          max-width: 10em;
+          padding: 0.5em;
+        }
+      }
+    }
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1em;
+
+      &-field {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4em;
+        width: 50%;
+
+        & input {
+          width: 100%;
+        }
+      }
+    }
+
+    & a {
+      text-align: center;
+      font-size: small;
+    }
+
+    &__submit {
+      width: 25%;
+      padding: 1.2em 0;
+      margin: 1em;
+    }
+
+    &__register {
+      & p {
+        text-align: center;
+        font-size: small;
+        margin-bottom: 1em;
+      }
+
+      & a {
+        display: block;
+        text-align: center;
+        padding: 0.6em;
+        border: 1px solid var(--href-fgcol);
+        width: fit-content;
+        margin: auto;
+        text-decoration: none;
+      }
+    }
+  }
+}

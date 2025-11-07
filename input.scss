@@ -65,6 +65,13 @@ input[type="search"]:not(:placeholder-shown) {
 	background-image: none;
 }
 
+input[type="submit"] {
+  background-color: var(--btn-bgcol);
+  color: white;
+  border: 1px solid var(--btn-bgcol);
+  cursor: pointer;
+}
+
 // -------------------------------------------------------------------
 // Base styles for checkbox: https://stackoverflow.com/a/27779075
 // -------------------------------------------------------------------
