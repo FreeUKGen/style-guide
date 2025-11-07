@@ -1,0 +1,9 @@
+//------------------------------------------------------------------
+// main.scss
+// pulls in "core" style guide files from directory above
+// and all the project specific reg SASS files in this directory
+// DSullivan Nov 2025
+//-------------------------------------------------------------------
+
+@use '../core.scss';
+@use 'login.scss';
