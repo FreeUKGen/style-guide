@@ -21,7 +21,7 @@ header {
 
 main {
   margin-bottom: 2em;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
 
   & .image-container {
     max-width: 14em;
@@ -29,11 +29,9 @@ main {
   }
 
   & .login {
-    padding: 2em;
-
     &__intro {
       line-height: 1.6;
-      margin: 2em 0 1.6em;
+      margin: 0.8em 0 1.6em;
     }
 
     &__select {
