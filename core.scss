@@ -9,6 +9,7 @@
 @use 'form';
 @use 'toast';
 @use 'image';
+@use 'login';
 
 /** core variables **/
 $nav-height: 44px;
@@ -16,27 +17,6 @@ $nav-height: 44px;
 :root {
 	--body-bgcol: white;    			// Primary background
 	--body-fgcol: black;    			// Primary background
-
-	--btn-fgcol: white;
-	--btn-bgcol: #007fad;
-
-	--primary-reg-color: #007fad;
-	--secondary-reg-color: #00857e;
-
-	--nav-fgcol: #fff;
-	--nav-bgcol: #007fad;
-	--nav-height: 44px;
-	--nav-hover-fgcol: white;
-	--nav-hover-bgcol: #005f80;
-	--nav-drop-fgcol: black;
-	--nav-drop-bgcol: #eee;
-
-	--href-fgcol: #00857e;
-
-	--thead-bgcol: #ebebeb;
-	--head-fgcol: #888;
-
-	--border-fgcol: #444;
 
 	--error-fgcol: #d80000;
 	--error-bg-col: #FAECEC;
