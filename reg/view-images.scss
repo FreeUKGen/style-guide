@@ -1,3 +1,10 @@
+/* Override bootsrap-shim so we can have 6 items per row on lg+ */
+@media (min-width: 1200px) {
+  .container, .container-sm, .container-md, .container-lg, .container-xl {
+    max-width: 1200px;
+  }
+}
+
 .button-rotate-feature, .button-cancel-save {
   margin: 2rem 0 3rem;
   display: flex;
@@ -25,4 +32,8 @@ button {
       transform: scaleX(-1);
     }
   }
+}
+
+.view-images-image-wrapper {
+  margin: 1.875rem 0;
 }
