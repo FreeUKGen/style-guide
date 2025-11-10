@@ -25,6 +25,31 @@ $nav-height: 44px;
 	--disabled-bg-col: #F4F4F4;
 	--unselected-bg-col: #E6F6F5;
 
+	// @TODO
+	// duplicate here as definitions in reg/_colours not being picked-up
+	--btn-fgcol: white;
+	--btn-bgcol: #007fad;
+
+	--primary-reg-color: #007fad;
+	--secondary-reg-color: #00857e;
+
+	--nav-fgcol: #fff;
+	--nav-bgcol: #007fad;
+	--nav-height: 44px;
+	--nav-hover-fgcol: white;
+	--nav-hover-bgcol: #005f80;
+	--nav-drop-fgcol: black;
+	--nav-drop-bgcol: #eee;
+
+	--href-fgcol: #00857e;
+
+	--thead-bgcol: #ebebeb;
+	--head-fgcol: #888;
+
+	--border-fgcol: #444;
+	// ^^^
+	// duplicate above as definitions in reg/_colours not being picked-up
+
 	--gutter: 10px;
 
 	--input-bgcol: white;
