@@ -7,6 +7,7 @@
 @use 'carousel';
 @use 'table';
 @use 'form';
+@use 'load-csv';
 
 /** core variables **/
 $nav-height: 44px;
@@ -87,3 +88,8 @@ a {
 .block  { display: block; }
 .inline { display: inline; }
 .inline-block { display: inline-block; }
+
+// font weight
+
+.fg-bold { font-weight: 600;}
+.fg-bolder { font-weight: 900}
