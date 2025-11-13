@@ -1,0 +1,38 @@
+table {
+	&.stripped {
+		width: 100%;
+		thead {
+			background-color: var(--thead-bgcol);
+			border-top: 1px solid var(--disabled-col);
+			border-bottom: 1px solid var(--disabled-col);
+
+			th {
+			padding: 1.3em;
+			font-weight: 600;
+
+				.row {
+					flex-wrap: nowrap;
+					gap: 0.5em;
+				}
+			}
+		}
+		tbody {
+			tr {
+			border-top: 1px solid var(--disabled-col);
+			border-bottom: 1px solid var(--disabled-col);
+				&:nth-child(even) {
+					background-color: var(--unselected-bg-col);
+				}
+				td {
+					padding: 1.3em;
+					text-align: center;
+				}
+			}
+		}
+	}
+
+}
+.responsive-table-wrapper {
+	width: 100%;
+	overflow-x: auto;
+}
