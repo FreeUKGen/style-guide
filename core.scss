@@ -11,6 +11,13 @@
 @use 'image';
 @use 'login';
 @use 'load-csv';
+@use 'button';
+@use 'carousel';
+@use 'table';
+@use 'form';
+@use 'toast';
+@use 'image';
+@use 'login';
 
 /** core variables **/
 $nav-height: 44px;
@@ -127,8 +134,3 @@ a {
 .w40	{ width: var(--size-40) }
 .w50	{ width: var(--size-50) }
 .w100	{ width: 100%; }
-
-// font weight
-
-.fg-bold { font-weight: 600;}
-.fg-bolder { font-weight: 900}
