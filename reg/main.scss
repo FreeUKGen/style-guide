@@ -1,0 +1,11 @@
+//------------------------------------------------------------------
+// main.scss
+// pulls in "core" style guide files from directory above
+// and all the project specific reg SASS files in this directory
+// DSullivan 09 Nov 2025
+//-------------------------------------------------------------------
+
+
+@use 'colours.scss';
+@use '../core.scss';
+
