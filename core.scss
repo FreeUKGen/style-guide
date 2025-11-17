@@ -103,6 +103,7 @@ a {
 .block  { display: block; }
 .inline { display: inline; }
 .inline-block { display: inline-block; }
+.flex-centre { align-items: center; }
 .flex		{ display:flex; }
 .base 	{ align-items:baseline; }
 .apart 	{ justify-content: space-between; }
@@ -125,4 +126,6 @@ a {
 .w30	{ width: var(--size-30) }
 .w40	{ width: var(--size-40) }
 .w50	{ width: var(--size-50) }
-.w100	{ width: 100%; }
+.w100	{ width: 100%;}
+
+.wv50 { width: 50vw; }

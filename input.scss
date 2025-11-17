@@ -97,6 +97,20 @@ input[type="checkbox"] {
 		height: 12px;
   }
 
+	.label-above {
+		display: flex;
+	}
+
+	.input-disabled {
+		background-color: var(--disabled-col);
+		pointer-events: none;
+	}
+
+	.input-disabled:focus {
+		background-color: var(--disabled-col);
+		outline: 2px solid var(--border-fgcol);
+	}
+
   // -------------------------------------------------------------------
   // LOGICAL States (Selected / Indeterminate)
   // -------------------------------------------------------------------
@@ -199,8 +213,8 @@ input[type="checkbox"] {
 
     &:hover,
     &:focus-visible {
-      background-color: var(--disabled-bg-col);
-      outline: none;
+		 background-color: var(--disabled-bg-col);
+		 outline: none;
     }
 
     &:checked,
