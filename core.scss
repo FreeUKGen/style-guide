@@ -15,9 +15,18 @@
 $nav-height: 44px;
 
 :root {
+	--body-fgcol: black;    			// Primary foreground
 	--body-bgcol: white;    			// Primary background
-	--body-fgcol: black;    			// Primary background
 
+	--error-fgcol: #d80000;
+	--error-bg-col: #FAECEC;
+	--success-fgcol: #009000;
+	--disabled-col: #707070;
+	--disabled-bg-col: #F4F4F4;
+	--unselected-bg-col: #E6F6F5;
+
+	// @TODO
+	// duplicate here as definitions in reg/_colours not being picked-up
 	--btn-fgcol: white;
 	--btn-bgcol: #007fad;
 
@@ -38,13 +47,8 @@ $nav-height: 44px;
 	--head-fgcol: #888;
 
 	--border-fgcol: #444;
-
-	--error-fgcol: #d80000;
-	--error-bg-col: #FAECEC;
-	--success-fgcol: #009000;
-	--disabled-col: #707070;
-	--disabled-bg-col: #F4F4F4;
-	--unselected-bg-col: #E6F6F5;
+	// ^^^
+	// duplicate above as definitions in reg/_colours not being picked-up
 
 	--gutter: 10px;
 
@@ -67,6 +71,9 @@ $nav-height: 44px;
 	--size-16: 16em;
 	--size-18: 18em;
 	--size-20: 20em;
+	--size-30: 30em;
+	--size-40: 40em;
+	--size-50: 50em;
 
 	font-family: sans-serif;
 }
@@ -96,6 +103,9 @@ a {
 .block  { display: block; }
 .inline { display: inline; }
 .inline-block { display: inline-block; }
+.flex		{ display:flex; }
+.base 	{ align-items:baseline; }
+.apart 	{ justify-content: space-between; }
 
 .w1		{ width: var(--size-1) }
 .w2		{ width: var(--size-2) }
@@ -112,4 +122,7 @@ a {
 .w16	{ width: var(--size-16) }
 .w18	{ width: var(--size-18) }
 .w20	{ width: var(--size-20) }
+.w30	{ width: var(--size-30) }
+.w40	{ width: var(--size-40) }
+.w50	{ width: var(--size-50) }
 .w100	{ width: 100%; }
