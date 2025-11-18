@@ -99,6 +99,7 @@ input[type="checkbox"] {
 
 	.label-above {
 		display: flex;
+		flex-direction: column;
 	}
 
 	.input-disabled {
