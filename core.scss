@@ -10,6 +10,7 @@
 @use "toast";
 @use "image";
 @use "login";
+@use "load-csv";
 
 /** core variables **/
 $nav-height: 44px;
@@ -80,6 +81,41 @@ a {
   text-align: left;
 }
 // NOTE - UK spelling centre
+.centre 	{ text-align: center; }
+.hidden 	{ visibility: hidden; }
+
+.none   { display: none; }
+.block  { display: block; }
+.inline { display: inline; }
+.inline-block { display: inline-block; }
+.flex		{ display:flex; }
+.base 	{ align-items:baseline; }
+.apart 	{ justify-content: space-between; }
+
+.w1		{ width: var(--size-1) }
+.w2		{ width: var(--size-2) }
+.w3		{ width: var(--size-3) }
+.w4		{ width: var(--size-4) }
+.w5		{ width: var(--size-5) }
+.w6		{ width: var(--size-6) }
+.w7		{ width: var(--size-7) }
+.w8		{ width: var(--size-8) }
+.w9		{ width: var(--size-9) }
+.w10	{ width: var(--size-10) }
+.w12	{ width: var(--size-12) }
+.w14	{ width: var(--size-14) }
+.w16	{ width: var(--size-16) }
+.w18	{ width: var(--size-18) }
+.w20	{ width: var(--size-20) }
+.w30	{ width: var(--size-30) }
+.w40	{ width: var(--size-40) }
+.w50	{ width: var(--size-50) }
+.w100	{ width: 100%; }
+
+// font weight
+.bold   { font-weight: 600;}
+.bolder { font-weight: 900}
+
 .centre {
   text-align: center;
 }
@@ -175,4 +211,4 @@ a {
 
 .wv50 {
   width: 50vw;
-}
+
