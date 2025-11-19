@@ -1,0 +1,39 @@
+/* Override bootsrap-shim so we can have 6 items per row on lg+ */
+@media (min-width: 1200px) {
+  .container, .container-sm, .container-md, .container-lg, .container-xl {
+    max-width: 1200px;
+  }
+}
+
+.button-rotate-feature, .button-cancel-save {
+  margin: 2rem 0 3rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.875rem;
+}
+button {
+  &.rotate-clockwise,
+  &.rotate-anticlockwise {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 0.5rem;
+
+    &::after {
+      content: url("../images/icon-rotate.svg");
+      display: block;
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+
+  &.rotate-anticlockwise {
+    &::after {
+      transform: scaleX(-1);
+    }
+  }
+}
+
+.view-images-image-wrapper {
+  margin: 1.875rem 0;
+}
