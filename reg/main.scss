@@ -8,11 +8,10 @@
 
 @use 'colours.scss';
 @use '../core.scss';
-@use 'login.scss';
-@use 'view-images.scss';
+@use '../login.scss';
 
 @use 'fonts/source-sans-3';
- 
+
 :root {
 	font-family: "Source Sans 3 VF";
 }
