@@ -1,84 +1,58 @@
-@use 'reset';
-@use 'tiny-grid';
-@use 'nav';
-@use 'bootstrap-shim';
-@use 'input';
-@use 'button';
-@use 'carousel';
-@use 'table';
-@use 'form';
-@use 'toast';
-@use 'image';
-@use 'login';
-@use 'load-csv';
+@use "reset";
+@use "tiny-grid";
+@use "nav";
+@use "bootstrap-shim";
+@use "input";
+@use "button";
+@use "carousel";
+@use "table";
+@use "form";
+@use "toast";
+@use "image";
+@use "login";
+@use "load-csv";
 
 /** core variables **/
 $nav-height: 44px;
 
 :root {
-	--body-fgcol: black;    			// Primary foreground
-	--body-bgcol: white;    			// Primary background
+  --body-fgcol: black; // Primary foreground
+  --body-bgcol: white; // Primary background
 
-	--error-fgcol: #d80000;
-	--error-bg-col: #FAECEC;
-	--success-fgcol: #009000;
-	--disabled-col: #707070;
-	--disabled-bg-col: #F4F4F4;
-	--unselected-bg-col: #E6F6F5;
+  --error-fgcol: #d80000;
+  --error-bg-col: #faecec;
+  --success-fgcol: #009000;
+  --disabled-col: #707070;
+  --disabled-bg-col: #f4f4f4;
+  --unselected-bg-col: #e6f6f5;
 
-	// @TODO
-	// duplicate here as definitions in reg/_colours not being picked-up
-	--btn-fgcol: white;
-	--btn-bgcol: #007fad;
+  --gutter: 10px;
 
-	--primary-reg-color: #007fad;
-	--secondary-reg-color: #00857e;
+  --input-bgcol: white;
+  --input-vert-padding: 0.6em;
+  --focus-bgcol: #dfd;
 
-	--nav-fgcol: #fff;
-	--nav-bgcol: #007fad;
-	--nav-height: 44px;
-	--nav-hover-fgcol: white;
-	--nav-hover-bgcol: #005f80;
-	--nav-drop-fgcol: black;
-	--nav-drop-bgcol: #eee;
+  --size-1: 1em;
+  --size-2: 2em;
+  --size-3: 3em;
+  --size-4: 4em;
+  --size-5: 5em;
+  --size-6: 6em;
+  --size-7: 7em;
+  --size-8: 8em;
+  --size-9: 9em;
+  --size-10: 10em;
+  --size-12: 12em;
+  --size-14: 14em;
+  --size-16: 16em;
+  --size-18: 18em;
+  --size-20: 20em;
+  --size-30: 30em;
+  --size-40: 40em;
+  --size-50: 50em;
 
-	--href-fgcol: #00857e;
-
-	--thead-bgcol: #ebebeb;
-	--head-fgcol: #888;
-
-	--border-fgcol: #444;
-	// ^^^
-	// duplicate above as definitions in reg/_colours not being picked-up
-
-	--gutter: 10px;
-
-	--input-bgcol: white;
-	--input-vert-padding: 0.6em;
-	--focus-bgcol: #dfd;
-
-	--size-1: 1em;
-	--size-2: 2em;
-	--size-3: 3em;
-	--size-4: 4em;
-	--size-5: 5em;
-	--size-6: 6em;
-	--size-7: 7em;
-	--size-8: 8em;
-	--size-9: 9em;
-	--size-10: 10em;
-	--size-12: 12em;
-	--size-14: 14em;
-	--size-16: 16em;
-	--size-18: 18em;
-	--size-20: 20em;
-	--size-30: 30em;
-	--size-40: 40em;
-	--size-50: 50em;
-
-	font-family: sans-serif;
+  font-family: sans-serif;
 }
-
 
 // high level pan-project styling
 body {
@@ -87,15 +61,25 @@ body {
 }
 
 a {
-	color: var(--href-fgcol);
+  color: var(--href-fgcol);
 }
 
 /* utility classes */
-.gutter  { margin: 0 var(--gutter); }
-.error   { color: var(--error-col); }
-.success { color: var(--success-col); }
-.right 	{ text-align: right; }
-.left 	{ text-align: left; }
+.gutter {
+  margin: 0 var(--gutter);
+}
+.error {
+  color: var(--error-col);
+}
+.success {
+  color: var(--success-col);
+}
+.right {
+  text-align: right;
+}
+.left {
+  text-align: left;
+}
 // NOTE - UK spelling centre
 .centre 	{ text-align: center; }
 .hidden 	{ visibility: hidden; }
@@ -129,6 +113,102 @@ a {
 .w100	{ width: 100%; }
 
 // font weight
+.bold   { font-weight: 600;}
+.bolder { font-weight: 900}
 
-.fg-bold { font-weight: 600;}
-.fg-bolder { font-weight: 900}
+.centre {
+  text-align: center;
+}
+.hidden {
+  visibility: hidden;
+}
+
+.none {
+  display: none;
+}
+.block {
+  display: block;
+}
+.inline {
+  display: inline;
+}
+.inline-block {
+  display: inline-block;
+}
+
+.flex-centre {
+  align-items: center;
+}
+
+.flex {
+  display: flex;
+}
+.base {
+  align-items: baseline;
+}
+.apart {
+  justify-content: space-between;
+}
+
+.w1 {
+  width: var(--size-1);
+}
+.w2 {
+  width: var(--size-2);
+}
+.w3 {
+  width: var(--size-3);
+}
+.w4 {
+  width: var(--size-4);
+}
+.w5 {
+  width: var(--size-5);
+}
+.w6 {
+  width: var(--size-6);
+}
+.w7 {
+  width: var(--size-7);
+}
+.w8 {
+  width: var(--size-8);
+}
+.w9 {
+  width: var(--size-9);
+}
+.w10 {
+  width: var(--size-10);
+}
+.w12 {
+  width: var(--size-12);
+}
+.w14 {
+  width: var(--size-14);
+}
+.w16 {
+  width: var(--size-16);
+}
+.w18 {
+  width: var(--size-18);
+}
+.w20 {
+  width: var(--size-20);
+}
+.w30 {
+  width: var(--size-30);
+}
+.w40 {
+  width: var(--size-40);
+}
+.w50 {
+  width: var(--size-50);
+}
+
+.w100 {
+  width: 100%;
+}
+
+.wv50 {
+  width: 50vw;
+
