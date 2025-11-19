@@ -2,32 +2,17 @@
 // main.scss
 // pulls in "core" style guide files from directory above
 // and all the project specific reg SASS files in this directory
-// DSullivan Nov 2025
+// DSullivan 09 Nov 2025
 //-------------------------------------------------------------------
 
+
+@use 'colours.scss';
 @use '../core.scss';
 @use 'login.scss';
 @use 'view-images.scss';
 
+@use 'fonts/source-sans-3';
+ 
 :root {
-	--btn-fgcol: white;
-	--btn-bgcol: #007fad;
-
-	--primary-reg-color: #007fad;
-	--secondary-reg-color: #00857e;
-
-	--nav-fgcol: #fff;
-	--nav-bgcol: #007fad;
-	--nav-height: 44px;
-	--nav-hover-fgcol: white;
-	--nav-hover-bgcol: #005f80;
-	--nav-drop-fgcol: black;
-	--nav-drop-bgcol: #eee;
-
-	--href-fgcol: #00857e;
-
-	--thead-bgcol: #ebebeb;
-	--head-fgcol: #888;
-
-	--border-fgcol: #444;
+	font-family: "Source Sans 3 VF";
 }

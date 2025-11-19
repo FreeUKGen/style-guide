@@ -1,0 +1,27 @@
+
+form.issue {
+	position: relative;
+	max-width: 49em;
+	display: grid;
+	place-items: center;
+
+	label {
+		display: block;
+		width: 100%;
+	}
+
+	input, textarea {
+		width: 100%;
+		line-height: 1.5;
+	}
+}
+
+#comment-description {
+	resize: vertical;
+}
+
+/* Placeholders */
+#comment-subject::placeholder,
+#comment-description::placeholder {
+	opacity: 0.7;
+}
