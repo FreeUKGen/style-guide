@@ -114,12 +114,12 @@ input[type="checkbox"] {
 	}
 
 	.input-disabled {
-		background-color: var(--disabled-col);
+		color: var(--disabled-col);
 		pointer-events: none;
 	}
 
 	.input-disabled:focus {
-		background-color: var(--disabled-col);
+		background-color: var(--disabled-bg-col);
 		outline: 2px solid var(--border-fgcol);
 	}
 
