@@ -1,0 +1,49 @@
+.load-csv {
+  &__table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  &__table {
+    width: 100%;
+
+    &-head {
+      background-color: var(--thead-bgcol);
+      border-top: 1px solid var(--disabled-col);
+      border-bottom: 1px solid var(--disabled-col);
+
+      th {
+        padding: 1.3em;
+        font-weight: 600;
+        cursor: pointer;
+
+        & .load-csv__table-head-row {
+          flex-wrap: nowrap;
+          gap: 0.5em;
+        }
+      }
+    }
+
+    &-body {
+      tr {
+        border-top: 1px solid var(--disabled-col);
+        border-bottom: 1px solid var(--disabled-col);
+
+        &:nth-child(even) {
+          background-color: var(--unselected-bg-col);
+        }
+
+        td {
+          padding: 1.3em;
+          text-align: center;
+        }
+      }
+    }
+  }
+  &__search-form {
+    .search {
+      background-color: var(--body-bgcol);
+      min-width: 20rem;
+    }
+  }
+}

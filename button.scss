@@ -24,9 +24,14 @@ button, a.btn {
     padding: 0
   }
 
+	&.submit {
+		padding-left:2.5em;
+		padding-right:2.5em;
+	}
+
   &:hover {
     box-sizing: content-box;
-    outline: 2px solid #007fad;
+    outline: 2px solid #555;
     background-color: #fff;
     color: #007fad;
     transition: none;
@@ -38,6 +43,9 @@ button, a.btn {
   }
   &:disabled {
     background-color: #f4f4f4;
-    color: #444444;
+    color: #777;
+	  &:hover {
+		  outline: 2px solid #ccc;
+	  }
   }
 }

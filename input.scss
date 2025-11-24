@@ -1,6 +1,5 @@
 /*
-@to-do
-- use rem when we know what the root font size is
+- root font size is 16px
 - refactor when we have more input types to share global default and state styles
 - instead of using base64 img for tick and hyphen and colour variants, it might be
 more readable to include one tick svg and one hyphen svg, and manipulate its fill
@@ -36,13 +35,23 @@ select {
 
 input,
 label {
-  display: block;
+	&.disabled {
+		opacity:0.5;
+	}
 }
+
+input {
+	&.no-border {
+		border:0;
+	}
+}
+
 textarea {
   min-height: 5em;
 }
 
 label {
+	display:block;
   margin-right: 0.1em;
   transition: opacity 1s;
 
@@ -115,12 +124,12 @@ input[type="checkbox"] {
 	}
 
 	.input-disabled {
-		background-color: var(--disabled-col);
+		color: var(--disabled-col);
 		pointer-events: none;
 	}
 
 	.input-disabled:focus {
-		background-color: var(--disabled-col);
+		background-color: var(--disabled-bg-col);
 		outline: 2px solid var(--border-fgcol);
 	}
 
