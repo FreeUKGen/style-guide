@@ -35,7 +35,10 @@ select {
 
 input,
 label {
-  display: block;
+	display: block;
+	&.disabled {
+		opacity:0.5;
+	}
 }
 textarea {
   min-height: 5em;
