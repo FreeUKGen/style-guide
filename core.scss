@@ -85,7 +85,15 @@ a {
 .block  { display: block; }
 .inline { display: inline; }
 .inline-block { display: inline-block; }
-.flex		{ display:flex; }
+.flex		{
+	display:flex;
+	.right {
+		margin-left:auto;
+	}
+	.left {
+		margin-right:auto;
+	}
+}
 .flex-end { align-items: flex-end; }
 .base 	{ align-items:baseline; }
 .apart 	{ justify-content: space-between; }
