@@ -40,6 +40,12 @@ label {
 	}
 }
 
+input {
+	&.no-border {
+		border:0;
+	}
+}
+
 textarea {
   min-height: 5em;
 }
