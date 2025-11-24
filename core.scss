@@ -169,10 +169,40 @@ a {
   width: var(--size-50);
 }
 
-.w100 {
-  width: 100%;
+.vw10 {
+  width: 10vw;
 }
 
-.wv50 {
+.vw20 {
+  width: 20vw;
+}
+
+.vw30 {
+  width: 30vw;
+}
+
+.vw40 {
+  width: 40vw;
+}
+.vw50 {
   width: 50vw;
+}
+.vw60 {
+  width: 60vw;
+}
+
+.vw70 {
+  width: 70vw;
+}
+
+.vw80 {
+  width: 80vw;
+}
+
+.vw90 {
+  width: 90vw;
+}
+
+.vw100 {
+  width: 100vw;
 }
