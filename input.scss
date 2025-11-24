@@ -35,16 +35,17 @@ select {
 
 input,
 label {
-	display: block;
 	&.disabled {
 		opacity:0.5;
 	}
 }
+
 textarea {
   min-height: 5em;
 }
 
 label {
+	display:block;
   margin-right: 0.1em;
   transition: opacity 1s;
 
