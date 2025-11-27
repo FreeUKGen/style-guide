@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+
+body {
+  font-family: 'Source Sans 3', sans-serif;
+}
+
+.gutter > div span > a.link-style {
+  text-decoration: none;
+  cursor: pointer;
+}
+/* CSV Viewer Component Styles */
+.csv-viewer {
+  max-width: 90%;
+  width: 800px;
+  margin: 25px auto;
+  padding: 20px;
+  border-radius: 15px;
+
+  
+
+  background: var(--primary-back);
+  
+  /* Fading/gradient border */
+  border: 2px;
+  border-image: linear-gradient(45deg, #ddd, #999, #ddd) 1;
+  
+  /* Alternative: Box shadow for softer fading effect */
+  box-shadow: 
+    0 0 0 1px rgba(0,0,0,0.1),
+    0 0 10px rgba(0,0,0,0.05),
+    0 4px 20px rgba(0,0,0,0.1);
+  
+  /* Center on all screen sizes */
+  @media (min-width: 768px) {
+    max-width: 80%;
+  }
+  
+  @media (min-width: 1024px) {
+    max-width: 70%;
+  }
+  
+  @media (min-width: 1200px) {
+    max-width: 60%;
+  }
+}
+
+.csv-viewer__content_header {
+  font-weight: bold;
+  /*margin-bottom: 10px;*/
+}
+
+.csv-viewer__content {
+  font-size: 12px;
+  white-space: pre-wrap;
+  overflow-x: scroll;
+  min-height: 300px;
+  /*padding: 1rem; */
+  border: 2px solid rgb(113, 105, 105);
+}
+
+.csv-viewer__content {
+  margin: 10px;
+  overflow: auto;           
+  -webkit-overflow-scrolling: touch;
+}
