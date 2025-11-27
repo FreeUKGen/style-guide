@@ -6,7 +6,7 @@
 }
 
 .button-rotate-feature, .button-cancel-save {
-  margin: 2rem 0 3rem;
+  margin: 1rem 2rem;
   display: flex;
   justify-content: flex-end;
   gap: 1.875rem;
@@ -20,7 +20,8 @@ button {
     gap: 0.5rem;
 
     &::after {
-      content: url("../images/icon-rotate.svg");
+      // filepath for comett-reg repo
+      content: url("/Icons/icon-rotate.svg");
       display: block;
       width: 1rem;
       height: 1rem;
