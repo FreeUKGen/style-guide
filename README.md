@@ -7,6 +7,12 @@ across a number of web-based FreeBMD projects.
 Initially the style guide will be applied to the 
 FreeComETT REG UX work circa late 2025.
 
+In the base directory the organisation-wide styles reside. Any styles which
+specific to a project are held in a subdirectory. For example-:
+
+    base directory with organisational level styles 
+        reg sub-directory with styles for FreeComETT REG.
+        bmd sub-directory with styles specific to FreeComETT BMD.
 
 ## General
 * The CSS pre-processor is SASS, and the syntax mode is `.scss`,
@@ -39,22 +45,41 @@ SCSS grid framework. Benefits of tiny-grid:
 
 
 ## Examples
-#### Indentation (`TAB`)
+### Indentation (`TAB`)
     nav {
         height: 44px; 
         color: $reg-nav-col;
         width: 100%;
     }
 
-#### CSS Properties
+### CSS Properties
 
-    :root {
-        --primary-col: #00857e;     # Primary colour
-        --primary-reg-col: #00857e; # Primary FreeREG colour
-        --primary-back: #e6f6e5;    # Primary background
-        --primary-accent-col: #517481;
-        --primary-accent-font-col
-    }
+#### General naming pattern
+[element-name]-[fgcol|bgcol]
+```
+:root {
+    --body-fgcol: black;    			// Primary foreground
+    --body-bgcol: white;    			// Primary background
+    
+    --btn-fgcol: white;
+    --btn-bgcol: #00857e;
+    --nav-fgcol: #fff;
+    --nav-bgcol: #007fad;
+    --nav-height: 44px;
+    --nav-hover-fgcol: white;
+    --nav-hover-bgcol: #005f80;
+    --nav-drop-fgcol: black;
+    --nav-drop-bgcol: #eee;
+    
+    --href-fgcol: #00857e;
+    
+    --error-fgcol: #d80000;
+    --success-fgcol: #009000;
+
+    --gutter: 10px;
+    font-family: 'Open Sans', sans-serif;
+}
+```
 
 
 ## Further Development

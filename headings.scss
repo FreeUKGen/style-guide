@@ -1,0 +1,8 @@
+
+h1, h2, h3, h4 {
+	&.headline {
+		font-size:larger;
+		color: var(--head-fcol);
+		font-weight:400;
+	}
+}

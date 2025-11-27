@@ -1,133 +1,137 @@
-
-$color: #616060;
-$nav-height:44px;
-$bar-height:4px;
-$background:#fff;
-
-$fg-hover:#000;
-$bg-hover: #caf1ca;
-$color-select:#000;
-$breakpoint:600px;
+$nav-height: 44px;
+$bar-height: 4px;
+$breakpoint: 600px;
 
 nav {
-	display:flex;
-	justify-content: space-between;
-	align-items: center;
-	color:white;
-	height: var(--nav-height);
-	background: var(--primary-reg-col);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: var(--nav-fgcol);
+  height: var(--nav-height);
+  background: var(--nav-bgcol);
 
-	a.logo {
-		background:white;
-		img {
-			height: $nav-height;
-		}
-	}
-	ul {
-		margin-right:auto;
-		padding:0;
-		li {
-			display:inline-block;
-			transition-duration: 0.3s;
-			list-style: none;
-			padding:0.8em 0.8em;
-			margin:0 1.2em;
-			cursor: pointer;
-			ul {
-				margin-top: 1rem;
-				display:none;
-			}
-			&:hover {
-				color:black;
-				background: $bg-hover;
-				position:relative;
-				ul {
-					background:white;
-					position:absolute;
-					left:0;
-					top:2.8em;
-					width:200px;
-					display:flex;
-					flex-direction: column;
-					padding:0 0.2em;
-					margin:0;
-					li {
-						margin:0;
-						outline:1px solid transparent;
-						&:hover {
-							background: $bg-hover;
+  a.logo {
+    // color: var(--nav-fgcol);
 
-							outline:1px solid #aaa;
-						}
-					}
-				}
-			}
+    img {
+      background: var(--nav-fgcol);
+      // max-width: 250px;
 
-			a {
-				color:white;
-				text-decoration: none;
-			}
-			&.active {
-				a {
-					color: $color-select;
-				}
-			}
-		}
-		@media screen and (max-width: $breakpoint) {
-			display:none;
-		}
-	}
+      height: 3.4rem;
+      width: auto;
+      padding-left: 2.5%;
+    }
+  }
+  ul {
+    margin-right: auto;
+    white-space: nowrap;
+    padding: 0;
 
-	section.menu {
-		background: $background;
-		cursor: pointer;
-		padding: 2px;
+    li {
+      display: inline-block;
+      transition-duration: 0.3s;
+      list-style: none;
+      padding: 10px;
+      margin: 0 1.2em;
+      cursor: pointer;
+      ul {
+        margin-top: 1rem;
+        display: none;
+      }
+      &:hover {
+        color: var(--nav-hover-fgcol);
+        background: var(--nav-hover-bgcol);
+        position: relative;
+        ul {
+          background: var(--nav-drop-bgcol);
+          color: var(--nav-drop-fgcol);
+          position: absolute;
+          left: 0;
+          top: 2.9em;
+          width: 220px;
+          display: flex;
+          flex-direction: column;
+          padding: 0 0.2em;
+          margin: 0;
+          justify-content: center;
+          align-content: center;
+          li {
+            margin: 0;
+            outline: 1px solid transparent;
+            &:hover {
+              background: var(--nav-hover-bgcol);
 
-		display: flex;
-		flex-direction: column;
-		text-align: center;
-		margin: 0 0.5em 0 0;
-		border-radius: 5px;
+              outline: 1px solid #aaa;
+            }
+          }
+        }
+      }
 
-		.menu-bar {
-			width: 80%;
-			height: $bar-height;
-			margin: 3px auto;
-			border-radius: 3px;
-			background: $color;
-		}
+      a {
+        text-decoration: none;
+      }
+      &.active {
+        a {
+          color: var(--nav-hover-bgcol);
+        }
+      }
+    }
+    @media screen and (max-width: $breakpoint) {
+      display: none;
+    }
+  }
 
-		&.active {
-			background: #575757;
-			.menu-bar {
-				background: white;
-			}
-		}
-		@media screen and (min-width: $breakpoint) {
-			display:none;
-		}
-	}
+  section.menu {
+    background: var(--nav-fgcol);
+    cursor: pointer;
+    padding: 2px;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 0.5em 0 0;
+    border-radius: 5px;
+
+    .menu-bar {
+      width: 80%;
+      height: $bar-height;
+      margin: 3px auto;
+      border-radius: 3px;
+      background: var(--nav-bgcol);
+    }
+
+    &.active {
+      background: #575757; // @TODO
+      .menu-bar {
+        background: var(--nav-fgcol);
+      }
+    }
+    @media screen and (min-width: $breakpoint) {
+      display: none;
+    }
+  }
 }
 
 section.menu-click {
-	display: none;
-	&.active {
-		display: block;
-	}
-	width: 100%;
-	padding: 5px 0;
-	margin-bottom: 10px;
-	text-align: center;
-	background: #6aa;
-	margin-left:auto;
+  display: none;
+  &.active {
+    display: block;
+  }
+  width: 100%;
+  padding: 5px 0;
+  margin-bottom: 10px;
+  text-align: center;
+  background: #6aa;
+  margin-left: auto;
 
-	li {
-		display:block;
-		color:white;
-		padding:3px;
-	}
+  li {
+    display: block;
+    color: var(--nav-fgcol);
+    padding: 3px;
+  }
 
-	@media screen and (max-width: $breakpoint) {
-		display:none;
-	}
+  @media screen and (max-width: $breakpoint) {
+    display: none;
+  }
 }
