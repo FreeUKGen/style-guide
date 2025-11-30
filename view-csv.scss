@@ -1,13 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
 
+
 body {
   font-family: 'Source Sans 3', sans-serif;
+}
+
+
+.gutter {
+  background: none;
 }
 
 .gutter > div span > a.link-style {
   text-decoration: none;
   cursor: pointer;
+  color: #00857e;
 }
 /* CSV Viewer Component Styles */
 .csv-viewer {
@@ -16,9 +23,7 @@ body {
   margin: 25px auto;
   padding: 20px;
   border-radius: 15px;
-
-  
-
+  height: 100%;
   background: var(--primary-back);
   
   /* Fading/gradient border */
@@ -63,4 +68,21 @@ body {
   margin: 10px;
   overflow: auto;           
   -webkit-overflow-scrolling: touch;
+}
+
+.back-btn {
+  float: right;
+  color: var(--body-bgcol);
+  background-color: #00796b;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 15px;
+  margin-right: 50px;
+}
+.back-btn:hover {
+  background-color:  #00796b;
+  color: white;
+  
 }
