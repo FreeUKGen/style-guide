@@ -35,13 +35,23 @@ select {
 
 input,
 label {
-  display: block;
+  &.disabled {
+    opacity: 0.5;
+  }
 }
+
+input {
+  &.no-border {
+    border: 0;
+  }
+}
+
 textarea {
   min-height: 5em;
 }
 
 label {
+  display: block;
   margin-right: 0.1em;
   transition: opacity 1s;
 
@@ -86,6 +96,7 @@ input[type="submit"] {
 // -------------------------------------------------------------------
 // Base styles for checkbox: https://stackoverflow.com/a/27779075
 // -------------------------------------------------------------------
+
 input[type="checkbox"] {
   width: 24px;
   height: 24px;
@@ -94,6 +105,7 @@ input[type="checkbox"] {
   box-shadow: 0 0 0 2px var(--href-fgcol);
   background-color: var(--body-bgcol);
   border: none;
+  margin: 0 auto;
 
   &::before {
     content: "";
@@ -108,20 +120,20 @@ input[type="checkbox"] {
     height: 12px;
   }
 
-	.label-above {
-		display: flex;
-		flex-direction: column;
-	}
+  .label-above {
+    display: flex;
+    flex-direction: column;
+  }
 
-	.input-disabled {
-		background-color: var(--disabled-col);
-		pointer-events: none;
-	}
+  .input-disabled {
+    color: var(--disabled-col);
+    pointer-events: none;
+  }
 
-	.input-disabled:focus {
-		background-color: var(--disabled-col);
-		outline: 2px solid var(--border-fgcol);
-	}
+  .input-disabled:focus {
+    background-color: var(--disabled-bg-col);
+    outline: 2px solid var(--border-fgcol);
+  }
 
   // -------------------------------------------------------------------
   // LOGICAL States (Selected / Indeterminate)
@@ -226,8 +238,8 @@ input[type="checkbox"] {
 
     &:hover,
     &:focus-visible {
-		 background-color: var(--disabled-bg-col);
-		 outline: none;
+      background-color: var(--disabled-bg-col);
+      outline: none;
     }
 
     &:checked,
