@@ -10,6 +10,9 @@
 @use "toast";
 @use "image";
 @use "login";
+@use "load-csv";
+@use "view-images";
+@use 'view-csv';
 
 /** core variables **/
 $nav-height: 44px;
@@ -78,6 +81,10 @@ a {
   text-align: left;
 }
 // NOTE - UK spelling centre
+.centre {
+  margin: 0px auto;
+  text-align: center;
+}
 
 .hidden {
   visibility: hidden;
@@ -178,10 +185,6 @@ a {
 }
 .bolder {
   font-weight: 900;
-}
-
-.centre {
-  text-align: center;
 }
 .hidden {
   visibility: hidden;
@@ -310,7 +313,6 @@ a {
   width: 100%;
 }
 
-.centre {
-  margin: 0px auto;
-  text-align: center;
+.wv50 {
+  width: 50vw;
 }
