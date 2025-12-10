@@ -9,7 +9,8 @@
   }
 }
 
-.button-rotate-feature, .button-cancel-save {
+.button-rotate-feature,
+.button-cancel-save {
   margin: 1rem 2rem;
   display: flex;
   justify-content: flex-end;
@@ -23,7 +24,7 @@ button {
     justify-content: space-around;
     gap: 0.5rem;
 
-    &::after {   
+    &::after {
       // display: block;
       // width: 1rem;
       // height: 1rem;
@@ -32,7 +33,6 @@ button {
       display: block;
       width: 1rem;
       height: 1rem;
-
     }
   }
 
@@ -66,5 +66,3 @@ button {
 p {
   padding-bottom: 10px;
 }
-=======
->>>>>>> e9fa085fcd832117d32ef290fe2cea739a75ea19:view-images.scss
