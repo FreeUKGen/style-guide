@@ -78,9 +78,7 @@ a {
   text-align: left;
 }
 // NOTE - UK spelling centre
-.centre {
-  text-align: center;
-}
+
 .hidden {
   visibility: hidden;
 }
@@ -310,4 +308,9 @@ a {
 
 .w100 {
   width: 100%;
+}
+
+.centre {
+  margin: 0px auto;
+  text-align: center;
 }

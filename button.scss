@@ -1,9 +1,12 @@
-
-button, a.btn, select {
-  text-align:center;
+button,
+a.btn,
+select {
+  text-align: center;
+  vertical-align: center;
   border-radius: 5px;
+
   cursor: pointer;
-  border: 1px solid var(--border-fgcol)
+  border: 2px solid var(--border-fgcol);
 }
 
 select {
@@ -11,26 +14,27 @@ select {
   appearance: auto; // this turns caret on after reset
 }
 
-button, a.btn {
+button,
+a.btn {
   color: var(--btn-fgcol);
   background: var(--btn-bgcol);
   text-decoration: none;
-  padding:  var(--input-vert-padding) 1em;
+  padding: var(--input-vert-padding) 1em;
   transition: all 0.3s ease;
 
   &.icon-only {
-    background:  transparent;
+    background: transparent;
     border: 0;
-    padding: 0
+    padding: 0;
   }
 
-	&.submit {
-		padding-left:2.5em;
-		padding-right:2.5em;
-	}
+  &.submit {
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+  }
 
   &:hover {
-    box-sizing: content-box;
+    box-sizing: border-box;
     outline: 2px solid #555;
     background-color: #fff;
     color: #007fad;
@@ -38,14 +42,40 @@ button, a.btn {
   }
   &:focus {
     box-sizing: border-box;
-    border: 2px solid white;
+
     transition: none;
   }
   &:disabled {
     background-color: #f4f4f4;
     color: #777;
-	  &:hover {
-		  outline: 2px solid #ccc;
-	  }
+    &:hover {
+      outline: 2px solid #ccc;
+    }
   }
+}
+button {
+  vertical-align: center;
+  display: inline;
+}
+button svg {
+  align-self: center;
+  justify-self: center;
+}
+
+.rotate-clockwise,
+.rotate-anticlockwise {
+  border-radius: 5px;
+}
+
+.rotate-clockwise:hover,
+.rotate-anticlockwise:hover {
+  box-sizing: border-box;
+  outline: 1.5px solid #555;
+}
+
+.rotate-clockwise:active,
+.rotate-anticlockwise:active {
+  box-sizing: border-box;
+  outline: 1.5px solid #555;
+  background-color: #c5ecfb;
 }
