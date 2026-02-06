@@ -12,7 +12,8 @@
 @use "login";
 @use "load-csv";
 @use "view-images";
-@use 'view-csv';
+@use "view-csv";
+@use "upload-status";
 
 /** core variables **/
 $nav-height: 44px;
