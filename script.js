@@ -9,6 +9,7 @@ const brightnessBtn = document.querySelector(".brightness");
 const contrastBtn = document.querySelector(".contrast");
 const rotateBtn = document.querySelector(".rotate");
 const container = document.getElementById("image-container");
+const zoom = document.querySelectorAll(".zoom");
 // const table = document.querySelector("table");
 // const tableScroll = document.querySelector(".table-scroll");
 const img1 = {
@@ -89,8 +90,19 @@ function rotate() {
   return;
 }
 
+let z = 1;
+function zoomFn(e) {
+  e.preventDefault();
+  if (e.target.id === "zoom-in") img.style.transform = `scale(${(z += 0.05)})`;
+  else if (e.target.id === "zoom-out" && z > 1)
+    img.style.transform = `scale(${(z -= 0.05)})`;
+
+  return;
+}
+
 btnRight.addEventListener("click", changeImgForward);
 btnLeft.addEventListener("click", changeImgBack);
 brightnessBtn.addEventListener("click", changeBrightness);
 contrastBtn.addEventListener("click", changeContrast);
 rotateBtn.addEventListener("click", () => rotate(90));
+zoom.forEach((x) => x.addEventListener("click", zoomFn));
