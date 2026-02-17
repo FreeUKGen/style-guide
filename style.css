@@ -178,16 +178,6 @@ tr:nth-child(odd) {
   font-size: 14px;
 }
 
-= #image {
-  transform-origin: center;
-  /* IE 10+, Firefox, etc. */
-  -webkit-transform-origin: center;
-  /* Chrome */
-  -ms-transform-origin: center;
-  /* IE 9 */
-  /* position: absolute; */
-}
-
 #image-container.rotate90,
 #image-container.rotate270 {
   height: 60vh;
