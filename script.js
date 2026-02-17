@@ -43,6 +43,7 @@ let saturateIncrement = 5;
 let position = 0;
 let z = 1;
 function changeImgForward() {
+  z=1
   img.style.transform = `scale(1)`;
   img.style.filter = `brightness(1)`;
   img.style.transform = `rotate(0deg)`;
@@ -55,6 +56,7 @@ function changeImgForward() {
 }
 
 function changeImgBack() {
+  z=1
   img.style.filter = `brightness(1)`;
   img.style.transform = `scale(1)`;
   img.style.transform = `rotate(0deg)`;
