@@ -40,9 +40,12 @@ totalImgNumDOM.textContent = totalImgCount.toString();
 let num = 1;
 let brightnessIncrement = 0.04;
 let saturateIncrement = 5;
+let position = 0;
+let z = 1;
 function changeImgForward() {
+  img.style.transform = `scale(1)`;
   img.style.filter = `brightness(1)`;
-
+  img.style.transform = `rotate(0deg)`;
   if (num > totalImgCount - 1 || num < 1) return;
   num++;
   curImgNum.textContent = num.toString();
@@ -53,6 +56,8 @@ function changeImgForward() {
 
 function changeImgBack() {
   img.style.filter = `brightness(1)`;
+  img.style.transform = `scale(1)`;
+  img.style.transform = `rotate(0deg)`;
 
   if (num > totalImgCount || num <= 1) return;
   num--;
@@ -74,7 +79,6 @@ function changeContrast() {
   return (img.style.filter = `saturate(${1 + saturateIncrement}%)`);
 }
 
-let position = 0;
 function rotate() {
   position += 90;
 
@@ -90,7 +94,6 @@ function rotate() {
   return;
 }
 
-let z = 1;
 function zoomFn(e) {
   e.preventDefault();
   if (e.target.id === "zoom-in") img.style.transform = `scale(${(z += 0.05)})`;
