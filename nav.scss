@@ -29,10 +29,12 @@ nav {
     padding: 0;
 
     li {
-      display: inline-block;
+      display: inline-flex;
+      align-items:center;
       transition-duration: 0.3s;
       list-style: none;
-      padding: 10px;
+      padding:0 10px;
+      height: var(--nav-height);
       margin: 0 1.2em;
       cursor: pointer;
       ul {
@@ -48,7 +50,7 @@ nav {
           color: var(--nav-drop-fgcol);
           position: absolute;
           left: 0;
-          top: 2.54em;
+          top: 2.7em;
           width: 220px;
           display: flex;
           flex-direction: column;
