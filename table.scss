@@ -83,6 +83,21 @@ tr:not(.img-preview) {
   gap: 1.875rem;
 }
 
+/* HistoryViewer-only horizontal scroll behavior */
+.history-section .table-container {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.history-section .transcription-table {
+  width: max-content;
+  min-width: 100%;
+  white-space: nowrap;
+}
+
 // .img-preview {
 //   padding: unset;
 //   width: 2.3rem;
